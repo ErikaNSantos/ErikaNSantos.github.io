@@ -1,14 +1,13 @@
-import { jsxLocPlugin } from "@builder.io/vite-plugin-jsx-loc";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
 import { defineConfig } from "vite";
-import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime()];
+// Removidos os plugins jsxLocPlugin e vitePluginManusRuntime que causam erro no deploy
+const plugins = [react(), tailwindcss()];
 
 export default defineConfig({
-  // Substitua pelo nome exato do seu repositório no GitHub
+  // MANTENHA O NOME DO SEU REPOSITÓRIO AQUI EXATAMENTE COMO ESTAVA
   base: '/ErikaNSantos.github.io/', 
 
   plugins,
@@ -28,6 +27,7 @@ export default defineConfig({
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
   },
+
   server: {
     port: 3000,
     host: true,
