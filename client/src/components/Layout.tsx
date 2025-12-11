@@ -20,19 +20,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <div className="flex flex-col min-h-screen relative overflow-hidden">
       {/* Background Elements - Refined */}
       <div className="fixed inset-0 z-[-1] bg-background">
-        {/* Removed animate-pulse, reduced opacity */}
         <div className="absolute top-[-10%] left-[-5%] w-[40%] h-[40%] rounded-full bg-primary/10 blur-[120px]" />
         <div className="absolute bottom-[-15%] right-[-10%] w-[50%] h-[50%] rounded-full bg-secondary/10 blur-[140px]" />
         <div className="absolute top-1/3 right-1/4 w-[30%] h-[30%] rounded-full bg-primary/5 blur-[100px]" />
-        
-        {/* Optional: Noise texture overlay for premium feel */}
-        <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-[0.03] pointer-events-none mix-blend-overlay"></div>
-      </div>
-      
-        {/* Animated gradient orbs */}
-        <div className="absolute top-[-10%] left-[-5%] w-[40%] h-[40%] rounded-full bg-primary/30 blur-[100px] animate-pulse" />
-        <div className="absolute bottom-[-15%] right-[-10%] w-[50%] h-[50%] rounded-full bg-secondary/20 blur-[120px] animate-pulse delay-1000" />
-        <div className="absolute top-1/3 right-1/4 w-[30%] h-[30%] rounded-full bg-accent/15 blur-[80px] animate-pulse delay-500" />
+        {/* Noise texture removida para evitar erro de build se o arquivo não existir */}
       </div>
 
       {/* Navigation with iOS Glass Effect */}
@@ -62,7 +53,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </nav>
 
           <div className="flex items-center gap-2">
-            {/* Language Selector */}
             <div className="flex items-center gap-1 glass-effect rounded-full p-1">
               <button
                 onClick={() => setLanguage('pt')}
