@@ -1,14 +1,16 @@
+import { jsxLocPlugin } from "@builder.io/vite-plugin-jsx-loc";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
 import { defineConfig } from "vite";
 
-// Removidos os plugins jsxLocPlugin e vitePluginManusRuntime que causam erro no deploy
+// Plugins limpos para produção
 const plugins = [react(), tailwindcss()];
 
 export default defineConfig({
-  // MANTENHA O NOME DO SEU REPOSITÓRIO AQUI EXATAMENTE COMO ESTAVA
-  base: '/ErikaNSantos.github.io/', 
+  // SE O NOME DO REPO FOR 'ErikaNSantos.github.io', USE '/'
+  // SE O NOME DO REPO FOR 'portfolio', USE '/portfolio/'
+  base: '/', 
 
   plugins,
 
@@ -24,6 +26,7 @@ export default defineConfig({
   root: path.resolve(import.meta.dirname, "client"),
 
   build: {
+    // Garante que o build vá para a pasta que o GitHub Actions vai ler
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
   },
