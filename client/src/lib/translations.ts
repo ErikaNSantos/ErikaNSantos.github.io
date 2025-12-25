@@ -9,11 +9,11 @@ export const translations = {
       contact: 'Contato',
     },
     hero: {
-      status: 'Disponível para novas oportunidades',
-      title: 'Engenharia de Dados & Cloud',
-      description: 'Transformando dados brutos em insights claros. Engenheira Química em transição para Cloud Engineering, construindo sistemas com inventividade e autonomia.',
-      viewProjects: 'Ver Projetos',
-      aboutMe: 'Sobre Mim',
+      status: 'Disponível para novas oportunidades', // Mantendo o status que você já tem
+      title: 'Engenharia de Processos & Inteligência de Dados',
+      description: 'Engenheira Química e Analista de Dados focada em eficiência operacional. Transformo dados industriais complexos em redução de custos, automação e decisões estratégicas. Especialista em Lean Six Sigma, SQL e Python.',
+      viewProjects: 'Ver Resultados', // "Resultados" é mais forte que "Projetos"
+      aboutMe: 'Minha Trajetória',
     },
     pillars: {
       title: 'Meus Pilares',
@@ -91,12 +91,12 @@ export const translations = {
       projects: 'Projects',
       contact: 'Contact',
     },
-    hero: {
+      hero: {
       status: 'Available for new opportunities',
-      title: 'Data & Cloud Engineering',
-      description: 'Transforming raw data into clear insights. Chemical Engineer transitioning to Cloud Engineering, building systems with creativity and autonomy.',
-      viewProjects: 'View Projects',
-      aboutMe: 'About Me',
+      title: 'Process Engineering & Data Intelligence',
+      description: 'Chemical Engineer and Data Analyst focused on operational efficiency. I transform complex industrial data into cost reduction, automation, and strategic decisions. Specialist in Lean Six Sigma, SQL, and Python.',
+      viewProjects: 'See Results',
+      aboutMe: 'My Journey',
     },
     pillars: {
       title: 'My Pillars',
