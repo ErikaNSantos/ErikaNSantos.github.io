@@ -36,16 +36,18 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="container relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+          
+          {/* Lado Esquerdo: Texto */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-effect-strong text-primary text-sm font-medium">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-effect-strong text-primary text-sm font-medium border border-primary/20">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
               {t('hero.status')}
             </div>
@@ -72,55 +74,45 @@ export default function Home() {
             </div>
           </motion.div>
 
+          {/* Lado Direito: Foto (New) */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative hidden lg:block"
           >
-            <div className="relative w-full aspect-square max-w-md mx-auto">
-              {/* Glass Card Container with iOS effect */}
-              <div className="absolute inset-0 glass-effect-dark rounded-3xl shadow-2xl flex items-center justify-center p-8">
-                <div className="grid grid-cols-2 gap-4 w-full h-full">
-                  <motion.div 
-                    whileHover={{ y: -5, scale: 1.05 }}
-                    className="glass-effect rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:bg-white/15 transition-all"
-                  >
-                    <Database className="h-10 w-10 text-blue-400" />
-                    <span className="font-medium text-sm text-center">Data Analysis</span>
-                  </motion.div>
-                  
-                  <motion.div 
-                    whileHover={{ y: -5, scale: 1.05 }}
-                    className="glass-effect rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:bg-white/15 transition-all"
-                  >
-                    <Cloud className="h-10 w-10 text-purple-400" />
-                    <span className="font-medium text-sm text-center">Cloud Eng</span>
-                  </motion.div>
-                  
-                  <motion.div 
-                    whileHover={{ y: -5, scale: 1.05 }}
-                    className="glass-effect rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:bg-white/15 transition-all"
-                  >
-                    <Code className="h-10 w-10 text-green-400" />
-                    <span className="font-medium text-sm text-center">Python</span>
-                  </motion.div>
-                  
-                  <motion.div 
-                    whileHover={{ y: -5, scale: 1.05 }}
-                    className="glass-effect rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:bg-white/15 transition-all"
-                  >
-                    <Terminal className="h-10 w-10 text-orange-400" />
-                    <span className="font-medium text-sm text-center">DevOps</span>
-                  </motion.div>
-                </div>
+            <div className="relative w-full max-w-md mx-auto aspect-square flex items-center justify-center">
+              <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl animate-pulse" />
+              <div className="relative z-10 w-[350px] h-[350px] rounded-full p-2 glass-effect-strong border border-white/10 shadow-2xl">
+                <img 
+                  src="/images/Foto 1.webp" 
+                  alt="Erika Nogueira Santos"
+                  className="w-full h-full rounded-full object-cover border-4 border-white/5"
+                />
               </div>
-              
-              {/* Floating Elements */}
-              <div className="absolute -top-10 -right-10 w-24 h-24 bg-primary/30 rounded-full blur-2xl animate-pulse" />
-              <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-secondary/30 rounded-full blur-2xl animate-pulse delay-700" />
+
+              {/* Cards Flutuantes */}
+              <motion.div 
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 4, repeat: Infinity }}
+                className="absolute -right-4 top-10 glass-effect p-3 rounded-xl flex items-center gap-2 shadow-lg"
+              >
+                <Database className="h-5 w-5 text-blue-400" />
+                <span className="text-sm font-bold">SQL Expert</span>
+              </motion.div>
+
+              <motion.div 
+                animate={{ y: [0, 10, 0] }}
+                transition={{ duration: 5, repeat: Infinity, delay: 1 }}
+                className="absolute -left-4 bottom-20 glass-effect p-3 rounded-xl flex items-center gap-2 shadow-lg"
+              >
+                <div className="h-2 w-2 rounded-full bg-green-500" />
+                <span className="text-sm font-bold">Lean Six Sigma</span>
+              </motion.div>
+
             </div>
           </motion.div>
+          
         </div>
       </section>
 
