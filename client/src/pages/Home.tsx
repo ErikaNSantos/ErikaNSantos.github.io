@@ -89,7 +89,7 @@ export default function Home() {
               {/* Container da Imagem */}
               <div className="relative z-10 w-[350px] h-[350px] rounded-full p-2 glass-effect-strong border border-white/10 shadow-2xl">
                 <img 
-                  src="client/public/images/Foto1.png" 
+                  src="/images/Foto1.png" 
                   alt="Erika Nogueira Santos"
                   className="w-full h-full rounded-full object-cover border-4 border-white/5"
                 />
