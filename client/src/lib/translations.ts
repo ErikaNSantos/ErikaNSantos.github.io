@@ -16,55 +16,55 @@ export const translations = {
       continuous: 'Contínuo',
     },
     hero: {
-      status: 'Aberta a colaborações remotas',
+      status: 'Disponível para oportunidades remotas',
       title: 'Engenharia de Processos & Inteligência de Dados',
-      description: 'Engenheira Química e Analista de Dados com experiência em pesquisa em modelagem computacional. Transformo dados industriais complexos em redução de custos, automação e decisões estratégicas. Habilidades em Python, SQL, Power BI e Lean Six Sigma.',
+      description: 'Engenheira Química com atuação em processos industriais, análise de dados e modelagem computacional. Utilizo Python, SQL e ferramentas analíticas para compreender sistemas complexos, automatizar fluxos de trabalho e apoiar decisões técnicas orientadas por evidências.',
       viewProjects: 'Ver Resultados',
       aboutMe: 'Minha Trajetória',
       greeting: 'Olá, eu sou',
     },
     pillars: {
       title: 'Meus Pilares',
-      subtitle: 'Valores inegociáveis que guiam meu trabalho, aprendizado e vida.',
+      subtitle: 'Princípios que orientam minha forma de aprender, analisar problemas e construir soluções.',
       clarity: {
         title: 'Clareza',
-        desc: 'Busca por dados e entendimento profundo. Soluções defendidas com lucidez.',
+        desc: 'Problemas complexos tornam-se solucionáveis quando premissas, dados e objetivos são explicitados.',
       },
       wisdom: {
-        title: 'Sabedoria',
-        desc: 'Curiosidade como motor. Conhecimento só tem valor quando vira ação.',
+        title: 'Aprendizado Contínuo',
+        desc: 'Conhecimento só produz valor quando amplia a capacidade de compreender sistemas e agir sobre eles.',
       },
       creativity: {
-        title: 'Inventividade',
-        desc: 'Paixão por construir coisas novas e úteis. Aprender é o meio, criar é o fim.',
+        title: 'Construção',
+        desc: 'Criar ferramentas, processos e modelos é a forma mais concreta de transformar conhecimento em resultado.',
       },
       freedom: {
-        title: 'Liberdade',
-        desc: 'Autonomia e responsabilidade. Ser dona do próprio tempo e caminho.',
+        title: 'Autonomia',
+        desc: 'Responsabilidade e independência caminham juntas. Boas decisões exigem capacidade de análise e execução.',
       },
     },
     about: {
       title: 'Sobre Mim',
-      intro: "Sou Engenheira Química e Analista de Dados atuando na intersecção entre operações industriais e modelagem computacional. Com mais de 3 anos em manufatura de larga escala e background em pesquisa em modelagem termodinâmica, transformo dados complexos em insights acionáveis.",
+      intro: "Sou Engenheira Química atuando na interface entre engenharia de processos, análise de dados e computação científica. Minha experiência combina manufatura industrial de larga escala, pesquisa em modelagem termodinâmica e desenvolvimento de soluções orientadas por dados.",
       journey: 'Minha Jornada',
-      journeyDesc: 'Atualmente, trabalho como Controladora de Processo na Continental Tires, aplicando análise de dados e metodologia Lean Six Sigma para otimizar sistemas industriais e reduzir custos operacionais.',
-      transition: 'Meu trabalho une três domínios: engenharia de processos industriais, análise de dados aplicada e computação científica. Tenho interesse especial em funções onde o conhecimento de domínio em manufatura ou química cria uma vantagem analítica real.',
-      doing: 'O que estou fazendo',
+      journeyDesc: 'Atualmente trabalho como Controladora de Processo na Continental Tires, utilizando análise de dados, melhoria contínua e metodologias Lean Six Sigma para compreender variabilidades de processo, reduzir perdas e aumentar a eficiência operacional.',
+      transition: 'Minha atuação conecta três domínios complementares: processos industriais, análise de dados aplicada e modelagem computacional. Tenho interesse especial por funções em que conhecimento técnico de manufatura ou química possa ser utilizado para gerar vantagem analítica e apoiar decisões complexas.',
+      doing: 'Atuação Atual',
       items: {
         data: {
           title: 'Analista de Dados (Controladora de Processo)',
           subtitle: 'Continental Tires',
-          desc: 'Transformando dados industriais em eficiência operacional.'
+          desc: 'Análise de processos industriais e suporte à melhoria contínua baseada em dados.'
         },
         thesis: {
           title: 'TCC UFBA',
           subtitle: 'Modelagem termodinâmica computacional',
-          desc: 'UNIFAC, Python, estimativa de parâmetros.'
+          desc: 'UNIFAC, Python e estimativa de parâmetros para sistemas complexos.'
         },
         openSource: {
           title: 'Open Source',
           subtitle: 'Projetos públicos',
-          desc: 'Construindo projetos em análise de dados e computação científica.'
+          desc: 'Desenvolvimento de ferramentas em análise de dados e computação científica.'
         }
       },
       skills: {
@@ -78,7 +78,7 @@ export const translations = {
     projects: {
       sectionTitle: 'Meu Trabalho',
       title: 'Projetos',
-      subtitle: 'Projetos que demonstram a aplicação de engenharia de dados, automação e computação científica a problemas reais.',
+      subtitle: 'Projetos que aplicam engenharia de dados, automação e modelagem computacional para resolver problemas concretos.',
       github: 'GitHub',
       demo: 'Demo',
       cblow: {
@@ -105,7 +105,7 @@ export const translations = {
     contact: {
       title: 'Vamos Conversar?',
       sectionTitle: 'Entre em contato',
-      description: 'Estou disponível para oportunidades como Analista de Dados e Analista de Processos, com foco em equipes industriais, científicas ou remotas. Aberta a funções internacionais.',
+      description: 'Busco oportunidades em análise de dados, inteligência operacional e engenharia de processos. Tenho interesse especial em equipes industriais, científicas ou distribuídas, onde conhecimento de domínio e análise quantitativa possam ser combinados para resolver problemas complexos.',
       email: 'Email',
       linkedin: 'LinkedIn',
       github: 'GitHub',
@@ -125,13 +125,13 @@ export const translations = {
       }
     },
     blog: {
-      subtitle: 'Artigos sobre dados, Python, engenharia de processos e transição de carreira.',
+      subtitle: 'Reflexões sobre dados, Python, engenharia de processos, computação científica e desenvolvimento profissional.',
       empty: 'Primeiros artigos em breve.',
       emptyDesc: 'Enquanto isso, os projetos contam a história melhor que qualquer post.',
       emptyCta: 'Ver Projetos',
     },
     footer: {
-      copyright: 'Construído com Clareza e Inventividade.',
+      copyright: 'Erika Nogueira Santos',
     },
   },
   en: {
@@ -149,55 +149,55 @@ export const translations = {
       continuous: 'Continuous',
     },
     hero: {
-      status: 'Open to remote collaborations',
+      status: 'Available for remote opportunities',
       title: 'Process Engineering & Data Intelligence',
-      description: 'Chemical Engineer and Data Analyst with a research background in computational modeling. I transform complex industrial data into cost reduction, automation, and strategic decisions. Skilled in Python, SQL, Power BI, and Lean Six Sigma.',
+      description: 'Chemical Engineer working at the intersection of industrial operations, data analytics, and computational modeling. I use Python, SQL, and analytical tools to understand complex systems, automate workflows, and support evidence-based technical decisions.',
       viewProjects: 'See Results',
       aboutMe: 'My Journey',
       greeting: "Hi, I'm",
     },
     pillars: {
-      title: 'My Pillars',
-      subtitle: 'Non-negotiable values that guide my work, learning, and life.',
+      title: 'My Principles',
+      subtitle: 'Principles that shape how I learn, analyze problems, and build solutions.',
       clarity: {
         title: 'Clarity',
-        desc: 'Pursuit of data and deep understanding. Solutions defended with lucidity.',
+        desc: 'Complex problems become manageable when assumptions, data, and objectives are made explicit.',
       },
       wisdom: {
-        title: 'Wisdom',
-        desc: 'Curiosity as a driving force. Knowledge only has value when it becomes action.',
+        title: 'Continuous Learning',
+        desc: 'Knowledge creates value only when it improves our ability to understand systems and act upon them.',
       },
       creativity: {
-        title: 'Creativity',
-        desc: 'Passion for building new and useful things. Learning is the means, creating is the end.',
+        title: 'Building',
+        desc: 'Creating tools, processes, and models is the most practical way to turn knowledge into results.',
       },
       freedom: {
-        title: 'Freedom',
-        desc: 'Autonomy and responsibility. Being the owner of my own time and path.',
+        title: 'Autonomy',
+        desc: 'Responsibility and independence go hand in hand. Good decisions require both analysis and execution.',
       },
     },
     about: {
       title: 'About Me',
-      intro: "I'm a Chemical Engineer and Data Analyst working at the intersection of industrial operations and computational modeling. With 3+ years in large-scale manufacturing and a research background in thermodynamic modeling, I turn complex data into actionable insight.",
+      intro: "I'm a Chemical Engineer working at the intersection of process engineering, data analytics, and scientific computing. My background combines large-scale manufacturing, thermodynamic modeling research, and the development of data-driven solutions.",
       journey: 'My Journey',
-      journeyDesc: 'Currently, I work as a Process Controller at Continental Tires, applying data analysis and Lean Six Sigma methodology to optimize industrial systems and reduce operational costs.',
-      transition: "My work blends three domains: industrial process engineering, applied data analytics, and scientific computing. I'm particularly interested in roles where domain knowledge in manufacturing or chemistry creates real analytical edge.",
-      doing: "What I'm doing",
+      journeyDesc: 'Currently, I work as a Process Controller at Continental Tires, applying data analysis, continuous improvement practices, and Lean Six Sigma methodologies to understand process variability, reduce losses, and improve operational performance.',
+      transition: "My work connects three complementary domains: industrial process engineering, applied analytics, and computational modeling. I'm particularly interested in roles where manufacturing or chemical engineering expertise can be leveraged to create analytical advantage and support complex decision-making.",
+      doing: "Current Focus",
       items: {
         data: {
           title: 'Data Analyst (Process Controller)',
           subtitle: 'Continental Tires',
-          desc: 'Transforming industrial data into operational efficiency.'
+          desc: 'Industrial process analysis and data-driven continuous improvement.'
         },
         thesis: {
           title: 'Final Thesis UFBA',
           subtitle: 'Computational thermodynamic modeling',
-          desc: 'UNIFAC, Python, parameter estimation.'
+          desc: 'UNIFAC, Python, and parameter estimation for complex systems.'
         },
         openSource: {
           title: 'Open Source',
           subtitle: 'Public projects',
-          desc: 'Building public projects in data analysis and scientific computing.'
+          desc: 'Developing tools in data analytics and scientific computing.'
         }
       },
       skills: {
@@ -211,7 +211,7 @@ export const translations = {
     projects: {
       sectionTitle: 'My Work',
       title: 'Projects',
-      subtitle: 'Projects that demonstrate applying data engineering, automation, and scientific computing to real problems.',
+      subtitle: 'Projects applying data engineering, automation, and computational modeling to solve real-world problems.',
       github: 'GitHub',
       demo: 'Demo',
       cblow: {
@@ -238,7 +238,7 @@ export const translations = {
     contact: {
       title: 'Get in Touch',
       sectionTitle: 'Contact Me',
-      description: "I'm available for Data Analyst and Process Analyst opportunities, with focus on industrial, scientific, or remote teams. Open to international roles.",
+      description: "I am interested in opportunities involving data analytics, operational intelligence, and process engineering. My focus is on environments where domain expertise and quantitative analysis can be combined to solve complex problems.",
       email: 'Email',
       linkedin: 'LinkedIn',
       github: 'GitHub',
@@ -258,13 +258,13 @@ export const translations = {
       }
     },
     blog: {
-      subtitle: 'Articles about data, Python, process engineering, and career transition.',
+      subtitle: 'Thoughts on data analytics, Python, process engineering, scientific computing, and professional growth.',
       empty: 'First articles coming soon.',
       emptyDesc: 'Meanwhile, the projects tell the story better than any post.',
       emptyCta: 'View Projects',
     },
     footer: {
-      copyright: 'Built with Clarity and Creativity.',
+      copyright: 'Erika Nogueira Santos',
     },
   },
 };

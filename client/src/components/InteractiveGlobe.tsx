@@ -6,19 +6,25 @@ import * as THREE from 'three';
 const Globe = lazy(() => import('react-globe.gl'));
 
 const LOCATIONS = [
-  { lat: -12.6975, lng: -38.3239, label: 'Camaçari', size: 0.6, color: '#c4b5fd', isHome: true },
-  { lat: 37.7749,  lng: -122.4194, label: 'San Francisco', size: 0.4, color: '#a78bfa' },
-  { lat: 52.5200,  lng: 13.4050, label: 'Berlin', size: 0.4, color: '#a78bfa' },
-  { lat: 38.7223,  lng: -9.1393, label: 'Lisboa', size: 0.4, color: '#a78bfa' },
-  { lat: 43.6532,  lng: -79.3832, label: 'Toronto', size: 0.4, color: '#a78bfa' },
+  { lat: -12.9777, lng: -38.5016, label: 'Salvador', size: 0.6, color: '#FFD58A', isHome: true },
+  
+  { lat: 37.7749,  lng: -122.4194, label: 'San Francisco', size: 0.4, color: '#F0A028' },
+  { lat: 52.5200,  lng: 13.4050, label: 'Berlin', size: 0.4, color: '#F0A028' },
+  { lat: 38.7223,  lng: -9.1393, label: 'Lisboa', size: 0.4, color: '#F0A028' },
+  { lat: 43.6532,  lng: -79.3832, label: 'Toronto', size: 0.4, color: '#F0A028' },
+  { lat: 35.6762,  lng: 139.6503, label: 'Tóquio', size: 0.4, color: '#F0A028' },
+  { lat: -33.9249, lng: 18.4241, label: 'Cidade do Cabo', size: 0.4, color: '#F0A028' },
+  { lat: -33.8688, lng: 151.2093, label: 'Sydney', size: 0.4, color: '#F0A028' },
+  { lat: 25.2048,  lng: 55.2708, label: 'Dubai', size: 0.4, color: '#F0A028' }
 ];
+
 
 const ARCS = LOCATIONS.slice(1).map((dest) => ({
   startLat: LOCATIONS[0].lat,
   startLng: LOCATIONS[0].lng,
   endLat: dest.lat,
   endLng: dest.lng,
-  color: ['rgba(167, 139, 250, 0.0)', 'rgba(167, 139, 250, 0.8)', 'rgba(167, 139, 250, 0.0)'],
+  color: ['rgba(240, 160, 40, 0.0)', 'rgba(240, 160, 40, 0.8)', 'rgba(240, 160, 40, 0.0)'],
 }));
 
 function GlobeInner() {
@@ -80,12 +86,12 @@ function GlobeInner() {
       showGlobe={true}
       globeMaterial={globeMaterial}
       showAtmosphere={true}
-      atmosphereColor="#8b5cf6"
+      atmosphereColor="#F0A028"
       atmosphereAltitude={0.18}
       polygonsData={countries.features}
-      polygonCapColor={() => 'rgba(167, 139, 250, 0.05)'}
-      polygonSideColor={() => 'rgba(167, 139, 250, 0)'}
-      polygonStrokeColor={() => '#a78bfa'}
+      polygonCapColor={() => 'rgba(240, 160, 40, 0.05)'}
+      polygonSideColor={() => 'rgba(240, 160, 40, 0)'}
+      polygonStrokeColor={() => '#F0A028'}
       polygonAltitude={0.005}
       pointsData={LOCATIONS}
       pointLat="lat"
@@ -100,7 +106,7 @@ function GlobeInner() {
       labelText="label"
       labelSize={1.2}
       labelDotRadius={0.4}
-      labelColor={() => 'rgba(196, 181, 253, 0.85)'}
+      labelColor={() => 'rgba(255, 213, 138, 0.9)'}
       labelResolution={2}
       labelAltitude={0.02}
       arcsData={ARCS}
@@ -116,7 +122,7 @@ function GlobeInner() {
 
 function GlobeSkeleton() {
   return (
-    <div className="w-full max-w-[500px] aspect-square mx-auto rounded-full bg-radial-gradient from-[#8b5cf61a] to-transparent animate-pulse" />
+    <div className="w-full max-w-[500px] aspect-square mx-auto rounded-full bg-radial-gradient from-[#F0A0281a] to-transparent animate-pulse" />
   );
 }
 

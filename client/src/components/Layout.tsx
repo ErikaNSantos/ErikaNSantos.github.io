@@ -46,7 +46,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           className={cn(
             "px-3 py-1 rounded-full text-xs font-bold transition-all",
             language === lang
-              ? "bg-primary text-white"
+              ? "bg-primary text-primary-foreground"
               : "text-secondary hover:text-white"
           )}
         >
@@ -62,7 +62,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/5">
         <div className="container flex h-20 items-center justify-between gap-3">
           <Link href="/" className="flex items-center gap-2 group shrink-0">
-            <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center font-black text-white text-xl group-hover:rotate-12 transition-transform">
+            <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center font-black text-primary-foreground text-xl group-hover:rotate-12 transition-transform">
               E
             </div>
             <span className="text-white text-[18px] font-bold flex">

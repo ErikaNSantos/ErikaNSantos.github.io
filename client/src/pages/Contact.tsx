@@ -143,7 +143,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={loading}
-                className="bg-primary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary transition-all hover:scale-105 active:scale-95 disabled:opacity-60 disabled:hover:scale-100 focus-visible:ring-2 focus-visible:ring-primary/60"
+                className="bg-primary py-3 px-8 rounded-xl outline-none w-fit text-primary-foreground font-bold shadow-md shadow-primary transition-all hover:scale-105 active:scale-95 disabled:opacity-60 disabled:hover:scale-100 focus-visible:ring-2 focus-visible:ring-primary/60"
               >
                 {loading ? t("contact.form.sending") : t("contact.form.send")}
               </button>
