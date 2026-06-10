@@ -39,14 +39,14 @@ export default function About() {
       company: t('about.items.data.subtitle'),
       desc: t('about.items.data.desc'),
       icon: Briefcase,
-      date: `2021 — ${t('common.present')}`
+      date: `2022 — ${t('common.present')}`
     },
     {
       title: t('about.items.thesis.title'),
       company: t('about.items.thesis.subtitle'),
       desc: t('about.items.thesis.desc'),
       icon: Code,
-      date: "2024"
+      date: "2026"
     },
     {
       title: t('about.items.openSource.title'),
