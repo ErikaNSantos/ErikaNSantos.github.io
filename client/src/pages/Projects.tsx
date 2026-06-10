@@ -22,7 +22,7 @@ const PROJECTS: Project[] = [
     github: "https://github.com/ErikaNSantos",
     demo: null,
     icon: Trophy,
-    accent: "var(--primary)",
+    accent: "var(--accent-sky)",
   },
   {
     key: "finance",
@@ -125,9 +125,9 @@ export default function Projects() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`${t(`projects.${project.key}.title`)} — GitHub`}
-                  className="absolute top-3 right-3 w-10 h-10 rounded-full flex justify-center items-center bg-background/80 hover:bg-primary transition-colors"
+                  className="absolute top-3 right-3 w-10 h-10 rounded-full flex justify-center items-center bg-background/80 hover:bg-primary transition-colors group/gh"
                 >
-                  <Github className="w-5 h-5 text-white" />
+                  <Github className="w-5 h-5 text-white group-hover/gh:text-primary-foreground transition-colors" />
                 </a>
               </div>
 

@@ -41,7 +41,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative w-full h-screen mx-auto overflow-hidden bg-background">
         {/* Background gradiente local (sem dependência externa) */}
-        <div className="absolute inset-0 z-0 bg-[radial-gradient(120%_80%_at_70%_10%,rgba(145,94,255,0.18)_0%,transparent_60%),radial-gradient(80%_60%_at_10%_90%,rgba(0,206,168,0.08)_0%,transparent_55%)]" />
+        <div className="absolute inset-0 z-0 bg-[radial-gradient(120%_80%_at_70%_10%,rgba(240,160,40,0.10)_0%,transparent_60%),radial-gradient(80%_60%_at_10%_90%,rgba(70,165,141,0.06)_0%,transparent_55%)]" />
 
         {/* Elemento 3D Interativo no Fundo (Wave Particles) */}
         <div className="absolute inset-0 z-10">
@@ -74,7 +74,7 @@ export default function Home() {
             </p>
             
             <div className="flex flex-wrap gap-4 pt-8">
-              <Button size="lg" className="rounded-xl px-8 bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/25 transition-all" asChild>
+              <Button size="lg" className="rounded-xl px-8 bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/25 transition-all" asChild>
                 <Link href="/projects">
                   {t('hero.viewProjects')} <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>

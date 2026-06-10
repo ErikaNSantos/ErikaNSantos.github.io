@@ -57,7 +57,7 @@ const WaveParticles = () => {
       </bufferGeometry>
       <pointsMaterial
         size={0.15}
-        color="#915EFF"
+        color="#F0A028"
         transparent
         opacity={0.6}
         sizeAttenuation={true}

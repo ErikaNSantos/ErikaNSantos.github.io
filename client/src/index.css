@@ -38,24 +38,24 @@
 }
 
 :root {
-  /* Paleta — fonte única de verdade. Alterar aqui propaga para todo o site. */
-  --primary: #915EFF;
-  --primary-foreground: oklch(0.98 0 0);
+  /* Paleta "sala de controle" — fonte única de verdade. Alterar aqui propaga para todo o site. */
+  --primary: #F0A028;    /* âmbar de instrumentação */
+  --primary-foreground: #0B0E14;
   --radius: 0.75rem;
 
-  --background: #050816;
-  --foreground: #f3f3f3;
+  --background: #0B0E14; /* grafite azulado */
+  --foreground: #E8EAF0;
 
-  --tertiary: #151030;   /* cards */
-  --muted: #1d1836;      /* superfícies elevadas (toggle de idioma, etc.) */
-  --secondary: #aaa6c3;  /* texto secundário */
-  --teal: #00cea8;       /* acento secundário */
-  --lavender: #dfd9ff;   /* texto de destaque do hero */
+  --tertiary: #161C26;   /* cards */
+  --muted: #1E2532;      /* superfícies elevadas (toggle de idioma, etc.) */
+  --secondary: #8B93A7;  /* texto secundário */
+  --teal: #46A58D;       /* acento secundário (status/ok) */
+  --lavender: #C9D0E0;   /* texto de destaque do hero */
 
   /* Acentos dos cards de projeto */
-  --accent-gold: #d4a017;
-  --accent-rose: #f472b6;
-  --accent-sky: #38bdf8;
+  --accent-gold: #C9A227;
+  --accent-rose: #C97B9B;
+  --accent-sky: #6FA3D8;
 
   --card: var(--tertiary);
   --card-foreground: #f3f3f3;
