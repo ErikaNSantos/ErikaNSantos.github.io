@@ -12,7 +12,7 @@ const LOCATIONS = [
   { lat: 52.5200,  lng: 13.4050, label: 'Berlin', size: 0.4, color: '#F0A028' },
   { lat: 38.7223,  lng: -9.1393, label: 'Lisboa', size: 0.4, color: '#F0A028' },
   { lat: 43.6532,  lng: -79.3832, label: 'Toronto', size: 0.4, color: '#F0A028' },
-  { lat: 35.6762,  lng: 139.6503, label: 'Tóquio', size: 0.4, color: '#F0A028' },
+  { lat: 35.6762,  lng: 139.6503, label: 'Toquio', size: 0.4, color: '#F0A028' },
   { lat: -33.9249, lng: 18.4241, label: 'Cidade do Cabo', size: 0.4, color: '#F0A028' },
   { lat: -33.8688, lng: 151.2093, label: 'Sydney', size: 0.4, color: '#F0A028' },
   { lat: 25.2048,  lng: 55.2708, label: 'Dubai', size: 0.4, color: '#F0A028' }
@@ -35,9 +35,9 @@ function GlobeInner() {
   // Material instanciado com useMemo para estabilidade
   const globeMaterial = useMemo(() => {
     return new THREE.MeshStandardMaterial({
-      color: '#0a0a1a',
-      transparent: true,
-      opacity: 0.3,
+      color: '#04040a',
+      transparent: false,
+      opacity: 0.9,
     });
   }, []);
 
