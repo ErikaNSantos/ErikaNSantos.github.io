@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Érika Santos — Data &amp; Process Analytics</title>
+    <meta name="description" content="Chemical Engineer and Data Analyst. Python, SQL, Power BI and Lean Six Sigma applied to industrial data, automation and scientific computing. Engenheira Química e Analista de Dados." />
+    <meta property="og:title" content="Érika Santos — Data &amp; Process Analytics" />
+    <meta property="og:description" content="Chemical Engineer and Data Analyst — Python, SQL, Power BI, Lean Six Sigma." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://erikansantos.github.io/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/jpeg" href="/favicon.jpg" />
+    <link rel="apple-touch-icon" href="/favicon.jpg" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script>
+      // Restaura a rota salva pelo 404.html (SPA no GitHub Pages)
+      (function() {
+        const redirect = sessionStorage.getItem('redirect');
+        if (redirect && redirect !== location.pathname) {
+          sessionStorage.removeItem('redirect');
+          history.replaceState(null, '', redirect);
+        }
+      })();
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+
+</html>

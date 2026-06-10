@@ -1,0 +1,128 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --breakpoint-xs: 30rem; /* 480px — classes xs: estavam mortas sem isso */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  
+  /* Fontes Conectadas */
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Outfit", ui-sans-serif, system-ui, sans-serif;
+
+  /* Cores Mapeadas */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-tertiary: var(--tertiary);
+  --color-teal: var(--teal);
+  --color-lavender: var(--lavender);
+}
+
+:root {
+  /* Paleta — fonte única de verdade. Alterar aqui propaga para todo o site. */
+  --primary: #915EFF;
+  --primary-foreground: oklch(0.98 0 0);
+  --radius: 0.75rem;
+
+  --background: #050816;
+  --foreground: #f3f3f3;
+
+  --tertiary: #151030;   /* cards */
+  --muted: #1d1836;      /* superfícies elevadas (toggle de idioma, etc.) */
+  --secondary: #aaa6c3;  /* texto secundário */
+  --teal: #00cea8;       /* acento secundário */
+  --lavender: #dfd9ff;   /* texto de destaque do hero */
+
+  /* Acentos dos cards de projeto */
+  --accent-gold: #d4a017;
+  --accent-rose: #f472b6;
+  --accent-sky: #38bdf8;
+
+  --card: var(--tertiary);
+  --card-foreground: #f3f3f3;
+
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.08);
+  --ring: var(--primary);
+}
+
+.dark {
+  --primary-foreground: #ffffff;
+  --card: rgba(21, 16, 48, 0.6);
+  --popover: rgba(5, 8, 22, 0.9);
+  --popover-foreground: #f3f3f3;
+  --secondary-foreground: #ffffff;
+  --muted-foreground: var(--secondary);
+  --accent: var(--primary);
+  --accent-foreground: #ffffff;
+  --sidebar: rgba(5, 8, 22, 0.95);
+  --sidebar-foreground: #f3f3f3;
+  --sidebar-accent: var(--muted);
+  --sidebar-border: rgba(255, 255, 255, 0.08);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    max-width: 1280px;
+  }
+
+  .glass-effect {
+    @apply bg-tertiary/60 backdrop-blur-xl border border-white/10 shadow-lg;
+  }
+
+  .glass-effect-strong {
+    @apply bg-tertiary/80 backdrop-blur-2xl border border-white/15 shadow-xl;
+  }
+
+  .violet-gradient {
+    background: linear-gradient(-90deg, var(--primary) 0%, rgba(60, 51, 80, 0) 100%);
+  }
+
+  .dotted-line {
+    background-image: linear-gradient(to bottom, var(--primary) 50%, transparent 50%);
+    background-position: left;
+    background-size: 2px 20px;
+    background-repeat: repeat-y;
+    width: 2px;
+  }
+
+  .green-pink-gradient {
+    background: linear-gradient(90.13deg, var(--teal) 1.9%, #bf61ff 97.5%);
+  }
+}
