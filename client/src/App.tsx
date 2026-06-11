@@ -12,6 +12,7 @@ import Home from "./pages/Home";
 // markdown do blog) só são baixadas quando visitadas.
 const About = lazy(() => import("./pages/About"));
 const Projects = lazy(() => import("./pages/Projects"));
+const ProjectDetail = lazy(() => import("./pages/ProjectDetail"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
@@ -23,6 +24,7 @@ function Router() {
         <Route path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/projects" component={Projects} />
+        <Route path="/projects/:id" component={ProjectDetail} />
         <Route path="/blog" component={Blog} />
         <Route path="/blog/:id" component={BlogPost} />
         <Route path="/contact" component={Contact} />
