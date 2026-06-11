@@ -1,62 +1,9 @@
 import Layout from "@/components/Layout";
-import { Github, Trophy, Wallet, Swords, Zap, FlaskConical, type LucideIcon } from "lucide-react";
+import { Link } from "wouter";
+import { Github, type LucideIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
-
-interface Project {
-  key: string;
-  tags: string[];
-  github: string;
-  demo: string | null;
-  icon: LucideIcon;
-  accent: string; // token CSS de destaque do card (ex.: var(--primary))
-}
-
-// TODO(Érika): apontar `github` para os repositórios reais de cada projeto
-// (cblow, automação financeira e RPG). Enquanto o repo não for público,
-// o link cai no perfil — funciona, mas o link direto conta mais.
-const PROJECTS: Project[] = [
-  {
-    key: "cblow",
-    tags: ["FastAPI", "PostgreSQL", "React", "Riot API"],
-    github: "https://github.com/ErikaNSantos",
-    demo: null,
-    icon: Trophy,
-    accent: "var(--accent-sky)",
-  },
-  {
-    key: "finance",
-    tags: ["Python", "PostgreSQL", "ETL", "Docker"],
-    github: "https://github.com/ErikaNSantos",
-    demo: null,
-    icon: Wallet,
-    accent: "var(--teal)",
-  },
-  {
-    key: "rpg",
-    tags: ["React 19", "Vite", "Supabase", "TypeScript"],
-    github: "https://github.com/ErikaNSantos",
-    demo: null,
-    icon: Swords,
-    accent: "var(--accent-gold)",
-  },
-  {
-    key: "tcc",
-    tags: ["Python", "SciPy", "UNIFAC", "Optimization"],
-    github: "https://github.com/ErikaNSantos",
-    demo: null,
-    icon: FlaskConical,
-    accent: "var(--accent-rose)",
-  },
-  {
-    key: "energyBot",
-    tags: ["Python", "SQLite", "Telegram Bot"],
-    github: "https://github.com/ErikaNSantos/Energy-Bot",
-    demo: null,
-    icon: Zap,
-    accent: "var(--accent-sky)",
-  },
-];
+import { PROJECTS } from "@/lib/projects";
 
 /** Cabeçalho visual do card: gradiente + grade SVG inline. Zero peso de imagem. */
 function ProjectVisual({ icon: Icon, accent, patternId }: { icon: LucideIcon; accent: string; patternId: string }) {
@@ -116,8 +63,13 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.08, duration: 0.5 }}
               viewport={{ once: true }}
-              className="bg-tertiary p-5 rounded-2xl w-full border border-white/5 hover:border-primary/50 transition-all group flex flex-col"
+              className="relative bg-tertiary p-5 rounded-2xl w-full border border-white/5 hover:border-primary/50 transition-all group flex flex-col"
             >
+              <Link
+                href={`/projects/${project.key}`}
+                className="absolute inset-0 z-10 rounded-2xl focus-visible:ring-2 focus-visible:ring-primary/60"
+                aria-label={t(`projects.${project.key}.title`)}
+              />
               <div className="relative">
                 <ProjectVisual icon={project.icon} accent={project.accent} patternId={project.key} />
                 <a
@@ -125,7 +77,7 @@ export default function Projects() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`${t(`projects.${project.key}.title`)} — GitHub`}
-                  className="absolute top-3 right-3 w-10 h-10 rounded-full flex justify-center items-center bg-background/80 hover:bg-primary transition-colors group/gh"
+                  className="absolute top-3 right-3 z-20 w-10 h-10 rounded-full flex justify-center items-center bg-background/80 hover:bg-primary transition-colors group/gh"
                 >
                   <Github className="w-5 h-5 text-white group-hover/gh:text-primary-foreground transition-colors" />
                 </a>
