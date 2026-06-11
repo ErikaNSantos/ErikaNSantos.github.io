@@ -15,7 +15,7 @@ export const PROJECTS: Project[] = [
   {
     key: "maintenance",
     tags: ["Python", "Pandas", "scikit-learn", "streamlit"],
-    github: "https://github.com/predictive-mainentance",
+    github: "https://github.com/ErikaNSantos/predictive-mainentance",
     demo: null,
     icon: Wrench,
     accent: "var(--accent-violet)", // requer a linha nova no index.css (ver instruções)
