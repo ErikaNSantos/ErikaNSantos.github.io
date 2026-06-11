@@ -90,7 +90,7 @@ export const translations = {
         stack: 'Stack',
         viewCode: 'Ver código no GitHub',
       },
-        mainentance: {
+        maintenance: {
           title: 'Manutenção Preditiva — AI4I 2020',
           desc: 'Projeto de análise exploratória, validação de regras físicas de falha, engenharia de atributos e classificação multi-label aplicado ao dataset AI4I 2020. Inclui dashboard interativo para investigação de falhas e avaliação de modelos preditivos.',
           context: 'O dataset AI4I 2020 simula um ambiente industrial com sensores operacionais e diferentes modos de falha de equipamentos. Embora amplamente utilizado para estudos de manutenção preditiva, sua documentação mistura mecanismos determinísticos e probabilísticos, exigindo validação das regras descritas antes da construção de modelos de machine learning.',
@@ -260,7 +260,7 @@ export const translations = {
         stack: 'Stack',
         viewCode: 'View code on GitHub',
       },
-        mainentance: {
+        maintenance: {
           title: 'Predictive Maintenance — AI4I 2020',
           desc: 'Predictive maintenance project combining data quality validation, domain-driven feature engineering, multi-label failure classification, and an interactive analytics dashboard built on the AI4I 2020 industrial dataset.',
           context: 'The AI4I 2020 dataset simulates an industrial manufacturing environment with operational sensor data and multiple machine failure modes. While widely used for predictive maintenance research, the dataset combines deterministic and probabilistic failure mechanisms, requiring validation of the documented rules before reliable machine learning analysis can be performed.',
