@@ -1,4 +1,6 @@
-import { Trophy, Wallet, Swords, Zap, FlaskConical, type LucideIcon } from "lucide-react";
+import { Trophy, Wallet, Swords, Zap, FlaskConical, Wrench, type LucideIcon } from "lucide-react";
+// ^ O Wrench precisa estar nesta linha de import. Usar o ícone sem importá-lo
+//   lança ReferenceError em runtime e derruba a página.
 
 export interface Project {
   key: string;
@@ -9,17 +11,14 @@ export interface Project {
   accent: string; // token CSS de destaque do card (ex.: var(--primary))
 }
 
-// TODO(Érika): apontar `github` para os repositórios reais de cada projeto
-// (cblow, automação financeira e RPG). Enquanto o repo não for público,
-// o link cai no perfil — funciona, mas o link direto conta mais.
 export const PROJECTS: Project[] = [
   {
-    key: "manutencao-preditiva",
-    tags: ["Python", "Scikit-learn", "Streamlit", "Plotly"],
-    github: "https://github.com/ErikaNSantos/predictive-mainentance",
+    key: "maintenance",
+    tags: ["Python", "Pandas", "scikit-learn", "streamlit"],
+    github: "https://github.com/predictive-mainentance",
     demo: null,
     icon: Wrench,
-    accent: "var(--accent-amber)",
+    accent: "var(--accent-violet)", // requer a linha nova no index.css (ver instruções)
   },
   {
     key: "cblow",
