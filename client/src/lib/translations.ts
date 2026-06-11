@@ -90,6 +90,14 @@ export const translations = {
         stack: 'Stack',
         viewCode: 'Ver código no GitHub',
       },
+        manutencaoPreditiva: {
+          title: 'Manutenção Preditiva — AI4I 2020',
+          desc: 'Projeto de análise exploratória, validação de regras físicas de falha, engenharia de atributos e classificação multi-label aplicado ao dataset AI4I 2020. Inclui dashboard interativo para investigação de falhas e avaliação de modelos preditivos.',
+          context: 'O dataset AI4I 2020 simula um ambiente industrial com sensores operacionais e diferentes modos de falha de equipamentos. Embora amplamente utilizado para estudos de manutenção preditiva, sua documentação mistura mecanismos determinísticos e probabilísticos, exigindo validação das regras descritas antes da construção de modelos de machine learning.',
+          problem: 'Modelos treinados apenas com variáveis brutas tendem a capturar correlações superficiais sem necessariamente compreender os mecanismos físicos que originam cada falha. Além disso, o dataset contém comportamentos aparentemente incoerentes — como falhas sem modo identificado e modos de falha sem parada da máquina — que precisam ser explicados antes de qualquer análise confiável.',
+          approach: 'Foi realizada uma auditoria completa do dataset, incluindo verificação de integridade, análise de distribuição das variáveis e validação das regras documentadas para os modos HDF, PWF, OSF, TWF e RNF. A partir dessas regras, foram construídas features derivadas de domínio, como diferença de temperatura, potência mecânica e produto entre desgaste e torque. Em seguida, foram treinados modelos Random Forest multi-label para prever simultaneamente os cinco modos de falha, comparando o desempenho entre conjuntos com e sem feature engineering. Os resultados foram disponibilizados em um dashboard desenvolvido em Streamlit com visualizações interativas, validação das regras físicas e análise de importância das variáveis.',
+          result: 'As regras determinísticas HDF, PWF e OSF foram reconstruídas com concordância de 100% em relação aos registros originais do dataset. As features derivadas dos mecanismos físicos elevaram o F1-score dos modelos de 0,78 para 0,93 em HDF, de 0,65 para 0,98 em PWF e de 0,78 para 0,95 em OSF. O estudo também demonstrou que TWF e RNF apresentam natureza probabilística ou aleatória, tornando sua previsão inviável a partir das variáveis disponíveis. O dashboard final consolidou a análise exploratória, a validação das regras de negócio e a avaliação comparativa dos modelos em uma interface única para exploração dos resultados.'
+},
       cblow: {
         title: 'cblow — Plataforma de Torneios',
         desc: 'Plataforma para torneios comunitários de League of Legends: inscrições, chaveamento, integração com a Riot API e dashboards de estatísticas de partidas e desempenho de jogadores.',
@@ -252,6 +260,14 @@ export const translations = {
         stack: 'Stack',
         viewCode: 'View code on GitHub',
       },
+        predictiveMaintenance: {
+          title: 'Predictive Maintenance — AI4I 2020',
+          desc: 'Predictive maintenance project combining data quality validation, domain-driven feature engineering, multi-label failure classification, and an interactive analytics dashboard built on the AI4I 2020 industrial dataset.',
+          context: 'The AI4I 2020 dataset simulates an industrial manufacturing environment with operational sensor data and multiple machine failure modes. While widely used for predictive maintenance research, the dataset combines deterministic and probabilistic failure mechanisms, requiring validation of the documented rules before reliable machine learning analysis can be performed.',
+          problem: 'Models trained solely on raw process variables often learn statistical correlations without capturing the physical mechanisms behind failures. Additionally, the dataset contains intentionally ambiguous cases, such as machine failures without a classified failure mode and random failures that do not always result in machine shutdown, making direct interpretation and modeling challenging.',
+          approach: 'The project began with a full data audit, including integrity checks, distribution analysis, and validation of the documented failure rules for Heat Dissipation Failure (HDF), Power Failure (PWF), Overstrain Failure (OSF), Tool Wear Failure (TWF), and Random Failure (RNF). Domain-informed features such as temperature differential, mechanical power, and wear–torque interaction were engineered from the documented physical rules. Multi-label Random Forest models were then trained to predict all failure modes simultaneously, comparing performance between baseline and engineered feature sets. The results were consolidated into an interactive Streamlit dashboard featuring exploratory analysis, rule validation, feature importance analysis, and model performance evaluation.',
+          result: 'The reconstructed HDF, PWF, and OSF rules achieved 100% agreement with the original dataset labels, confirming their deterministic nature. Feature engineering substantially improved model performance, increasing F1-score from 0.78 to 0.93 for HDF, from 0.65 to 0.98 for PWF, and from 0.78 to 0.95 for OSF. The analysis also demonstrated that TWF and RNF contain probabilistic or random behavior that cannot be reliably predicted using the available process variables. The final dashboard provides a unified environment for exploring machine behavior, validating failure mechanisms, and assessing predictive model performance.'
+},
       cblow: {
         title: 'cblow — Tournament Platform',
         desc: 'Platform for community League of Legends tournaments: registrations, bracket management, Riot API integration, and dashboards for match statistics and player performance.',

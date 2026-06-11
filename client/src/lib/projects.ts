@@ -14,6 +14,14 @@ export interface Project {
 // o link cai no perfil — funciona, mas o link direto conta mais.
 export const PROJECTS: Project[] = [
   {
+    key: "manutencao-preditiva",
+    tags: ["Python", "Scikit-learn", "Streamlit", "Plotly"],
+    github: "https://github.com/ErikaNSantos/predictive-mainentance",
+    demo: null,
+    icon: Wrench,
+    accent: "var(--accent-amber)",
+  },
+  {
     key: "cblow",
     tags: ["FastAPI", "PostgreSQL", "React", "Riot API"],
     github: "https://github.com/ErikaNSantos",
