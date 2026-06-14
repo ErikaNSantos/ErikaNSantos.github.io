@@ -1,6 +1,5 @@
 import Layout from "@/components/Layout";
 import { Link } from "wouter";
-import { Github, type LucideIcon } from "lucide-react";
 import { Github, ExternalLink, type LucideIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
