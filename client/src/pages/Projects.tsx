@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout";
 import { Link } from "wouter";
 import { Github, type LucideIcon } from "lucide-react";
+import { Github, ExternalLink, type LucideIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { PROJECTS } from "@/lib/projects";
@@ -81,6 +82,18 @@ export default function Projects() {
                 >
                   <Github className="w-5 h-5 text-white group-hover/gh:text-primary-foreground transition-colors" />
                 </a>
+                {project.demo && (
+                  <a
+                  
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${t(`projects.${project.key}.title`)} — ${t("projects.demo")}`}
+                    className="absolute top-3 right-14 z-20 w-10 h-10 rounded-full flex justify-center items-center bg-background/80 hover:bg-primary transition-colors group/demo"
+                  >
+                    <ExternalLink className="w-5 h-5 text-white group-hover/demo:text-primary-foreground transition-colors" />
+                  </a>
+                )}
               </div>
 
               <div className="mt-5 flex-1">
