@@ -54,9 +54,9 @@ export const PROJECTS: Project[] = [
   },
   {
     key: "energyBot",
-    tags: ["Python", "SQLite", "Telegram Bot","Streamlit","VPS"],
+    tags: ["Python", "SQLite", "Telegram Bot", "Streamlit", "VPS"],
     github: "https://github.com/ErikaNSantos/Energy-Bot",
-    demo: null,
+    demo: "http://137.131.144.54:8501",
     icon: Zap,
     accent: "var(--primary)",
   },
