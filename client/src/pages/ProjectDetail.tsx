@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import { Link, Redirect, useParams } from "wouter";
 import { motion } from "framer-motion";
-import { ArrowLeft, Github } from "lucide-react";
+import { ArrowLeft, Github, ExternalLink } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getProject } from "@/lib/projects";
 
@@ -83,7 +83,7 @@ export default function ProjectDetail() {
               ))}
             </div>
 
-            <div className="mt-12 pt-8 border-t border-white/5">
+            <div className="mt-12 pt-8 border-t border-white/5 flex flex-wrap gap-4">
               <a
                 href={project.github}
                 target="_blank"
@@ -93,6 +93,17 @@ export default function ProjectDetail() {
                 <Github className="w-5 h-5" />
                 {t("projects.detail.viewCode")}
               </a>
+              {project.demo && (
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 px-6 rounded-xl transition-colors"
+                >
+                  <ExternalLink className="w-5 h-5" />
+                  {t("projects.detail.viewDemo")}
+                </a>
+              )}
             </div>
           </motion.div>
         </div>
