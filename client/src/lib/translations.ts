@@ -89,6 +89,7 @@ export const translations = {
         result: 'Resultado',
         stack: 'Stack',
         viewCode: 'Ver código no GitHub',
+        viewDemo: 'Ver dashboard ao vivo',
       },
         maintenance: {
           title: 'Manutenção Preditiva — AI4I 2020',
@@ -259,6 +260,7 @@ export const translations = {
         result: 'Result',
         stack: 'Stack',
         viewCode: 'View code on GitHub',
+        viewDemo: 'View live dashboard',
       },
         maintenance: {
           title: 'Predictive Maintenance — AI4I 2020',
