@@ -199,7 +199,7 @@ export const translations = {
       title: 'About Me',
       intro: "I'm a Chemical Engineer and Data Analyst working at the intersection of industrial operations and computational modeling. With 3+ years in large-scale manufacturing and a research background in thermodynamic modeling, I turn complex data into actionable insight.",
       journey: 'My Journey',
-      journeyDesc: 'For 3.5 years I worked as a Process Controller at Continental Tires do Brasil, applying data analysis and Lean Six Sigma methodology to optimize industrial systems and reduce operational costs. Today, while I look for the next data role, I balance a short-term stint on iFood's Performance and Collection team.',
+      journeyDesc: 'For 3.5 years I worked as a Process Controller at Continental Tires do Brasil, applying data analysis and Lean Six Sigma methodology to optimize industrial systems and reduce operational costs. Today, while I look for the next data role, I balance a short-term stint on the Performance and Collection team at iFood.',
       transition: "My work blends three domains: industrial process engineering, applied data analytics, and scientific computing. I'm particularly interested in roles where domain knowledge in manufacturing or chemistry creates real analytical edge.",
       doing: "What I'm doing",
       items: {
