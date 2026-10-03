@@ -35,11 +35,18 @@ export default function About() {
 
   const experiences = [
     {
-      title: t('about.items.data.title'),
-      company: t('about.items.data.subtitle'),
-      desc: t('about.items.data.desc'),
+      title: t('about.items.dataIntern.title'),
+      company: t('about.items.dataIntern.subtitle'),
+      desc: t('about.items.dataIntern.desc'),
       icon: Briefcase,
-      date: `2022 — ${t('common.present')}`
+      date: '11/2022 — 08/2024'
+    },
+    {
+      title: t('about.items.dataClt.title'),
+      company: t('about.items.dataClt.subtitle'),
+      desc: t('about.items.dataClt.desc'),
+      icon: Briefcase,
+      date: '08/2024 — 07/2026'
     },
     {
       title: t('about.items.thesis.title'),

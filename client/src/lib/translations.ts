@@ -47,14 +47,19 @@ export const translations = {
       title: 'Sobre Mim',
       intro: "Sou Engenheira Química e Analista de Dados atuando na intersecção entre operações industriais e modelagem computacional. Com mais de 3 anos em manufatura de larga escala e background em pesquisa em modelagem termodinâmica, transformo dados complexos em insights acionáveis.",
       journey: 'Minha Jornada',
-      journeyDesc: 'Atualmente, trabalho como Controladora de Processo na Continental Tires, aplicando análise de dados e metodologia Lean Six Sigma para otimizar sistemas industriais e reduzir custos operacionais.',
+      journeyDesc: 'Por 3,5 anos trabalhei como Controladora de Processo na Continental Pneus do Brasil, aplicando análise de dados e metodologia Lean Six Sigma para otimizar sistemas industriais e reduzir custos operacionais. Hoje, enquanto busco a próxima posição em dados, concilio um período curto de experiência operacional no iFood.',
       transition: 'Meu trabalho une três domínios: engenharia de processos industriais, análise de dados aplicada e computação científica. Tenho interesse especial em funções onde o conhecimento de domínio em manufatura ou química cria uma vantagem analítica real.',
       doing: 'O que estou fazendo',
       items: {
-        data: {
+        dataIntern: {
+          title: 'Estágio em Engenharia de Processos',
+          subtitle: 'Continental Pneus do Brasil',
+          desc: 'Dashboards de rastreabilidade construídos do zero e análise que identificou um fornecedor com defeito crônico, reduzindo o custo de refugo relacionado em cerca de 30%.'
+        },
+        dataClt: {
           title: 'Analista de Dados (Controladora de Processo)',
-          subtitle: 'Continental Tires',
-          desc: 'Transformando dados industriais em eficiência operacional.'
+          subtitle: 'Continental Pneus do Brasil',
+          desc: 'Relatório manual de refugo migrado para dashboards Power BI, com automação da resolução de código SAP que economizou cerca de 5 horas por semana.'
         },
         thesis: {
           title: 'TCC UFBA',
@@ -194,14 +199,19 @@ export const translations = {
       title: 'About Me',
       intro: "I'm a Chemical Engineer and Data Analyst working at the intersection of industrial operations and computational modeling. With 3+ years in large-scale manufacturing and a research background in thermodynamic modeling, I turn complex data into actionable insight.",
       journey: 'My Journey',
-      journeyDesc: 'Currently, I work as a Process Controller at Continental Tires, applying data analysis and Lean Six Sigma methodology to optimize industrial systems and reduce operational costs.',
+      journeyDesc: 'For 3.5 years I worked as a Process Controller at Continental Tires do Brasil, applying data analysis and Lean Six Sigma methodology to optimize industrial systems and reduce operational costs. Today, while I look for the next data role, I balance a short-term operations stint at iFood.',
       transition: "My work blends three domains: industrial process engineering, applied data analytics, and scientific computing. I'm particularly interested in roles where domain knowledge in manufacturing or chemistry creates real analytical edge.",
       doing: "What I'm doing",
       items: {
-        data: {
+        dataIntern: {
+          title: 'Process Engineering Intern',
+          subtitle: 'Continental Tires do Brasil',
+          desc: 'Traceability dashboards built from scratch and an analysis that identified a supplier with chronic defects, cutting related scrap costs by about 30%.'
+        },
+        dataClt: {
           title: 'Data Analyst (Process Controller)',
-          subtitle: 'Continental Tires',
-          desc: 'Transforming industrial data into operational efficiency.'
+          subtitle: 'Continental Tires do Brasil',
+          desc: 'Manual scrap reporting migrated to Power BI dashboards, with automated SAP code resolution that saved about 5 hours per week.'
         },
         thesis: {
           title: 'Final Thesis UFBA',
