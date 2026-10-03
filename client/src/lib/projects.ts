@@ -1,4 +1,4 @@
-import { Trophy, Wallet, Swords, Zap, FlaskConical, Wrench, type LucideIcon } from "lucide-react";
+import { Zap, FlaskConical, Wrench, type LucideIcon } from "lucide-react";
 // ^ O Wrench precisa estar nesta linha de import. Usar o ícone sem importá-lo
 //   lança ReferenceError em runtime e derruba a página.
 
@@ -19,30 +19,6 @@ export const PROJECTS: Project[] = [
     demo: null,
     icon: Wrench,
     accent: "var(--accent-violet)", // requer a linha nova no index.css (ver instruções)
-  },
-  {
-    key: "cblow",
-    tags: ["FastAPI", "PostgreSQL", "React", "Riot API"],
-    github: "https://github.com/ErikaNSantos",
-    demo: null,
-    icon: Trophy,
-    accent: "var(--accent-sky)",
-  },
-  {
-    key: "finance",
-    tags: ["Python", "PostgreSQL", "ETL", "Docker"],
-    github: "https://github.com/ErikaNSantos",
-    demo: null,
-    icon: Wallet,
-    accent: "var(--teal)",
-  },
-  {
-    key: "rpg",
-    tags: ["React 19", "Vite", "Supabase", "TypeScript"],
-    github: "https://github.com/ErikaNSantos",
-    demo: null,
-    icon: Swords,
-    accent: "var(--accent-gold)",
   },
   {
     key: "tcc",
