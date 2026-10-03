@@ -30,17 +30,17 @@ export const translations = {
         title: 'Clareza',
         desc: 'Busca por dados e entendimento profundo. Soluções defendidas com lucidez.',
       },
-      wisdom: {
-        title: 'Sabedoria',
-        desc: 'Curiosidade como motor. Conhecimento só tem valor quando vira ação.',
+      execution: {
+        title: 'Execução',
+        desc: 'Fazer uma vez e fazer certo. Prefiro resolver um problema de vez a repetir o mesmo ajuste pra sempre.',
       },
       creativity: {
         title: 'Inventividade',
         desc: 'Paixão por construir coisas novas e úteis. Aprender é o meio, criar é o fim.',
       },
-      freedom: {
-        title: 'Liberdade',
-        desc: 'Autonomia e responsabilidade. Ser dona do próprio tempo e caminho.',
+      integrity: {
+        title: 'Integridade',
+        desc: 'Prefiro ganhar menos a fazer algo que considero errado. Resultado que eu consigo defender, mesmo sob pressão.',
       },
     },
     about: {
@@ -187,17 +187,17 @@ export const translations = {
         title: 'Clarity',
         desc: 'Pursuit of data and deep understanding. Solutions defended with lucidity.',
       },
-      wisdom: {
-        title: 'Wisdom',
-        desc: 'Curiosity as a driving force. Knowledge only has value when it becomes action.',
+      execution: {
+        title: 'Execution',
+        desc: "Do it once, do it right. I'd rather solve a problem for good than repeat the same fix forever.",
       },
       creativity: {
         title: 'Creativity',
         desc: 'Passion for building new and useful things. Learning is the means, creating is the end.',
       },
-      freedom: {
-        title: 'Freedom',
-        desc: 'Autonomy and responsibility. Being the owner of my own time and path.',
+      integrity: {
+        title: 'Integrity',
+        desc: "I'd rather earn less than do something I consider wrong. Results I can stand behind, even under pressure.",
       },
     },
     about: {

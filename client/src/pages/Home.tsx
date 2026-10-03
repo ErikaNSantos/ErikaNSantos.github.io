@@ -20,9 +20,9 @@ export default function Home() {
       desc: t('pillars.clarity.desc'),
     },
     {
-      title: t('pillars.wisdom.title'),
-      icon: "🎓",
-      desc: t('pillars.wisdom.desc'),
+      title: t('pillars.execution.title'),
+      icon: "⚙️",
+      desc: t('pillars.execution.desc'),
     },
     {
       title: t('pillars.creativity.title'),
@@ -30,9 +30,9 @@ export default function Home() {
       desc: t('pillars.creativity.desc'),
     },
     {
-      title: t('pillars.freedom.title'),
-      icon: "🕊️",
-      desc: t('pillars.freedom.desc'),
+      title: t('pillars.integrity.title'),
+      icon: "🧭",
+      desc: t('pillars.integrity.desc'),
     }
   ];
 
