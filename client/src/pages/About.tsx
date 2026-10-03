@@ -56,6 +56,13 @@ export default function About() {
       date: "2026"
     },
     {
+      title: t('about.items.ifood.title'),
+      company: t('about.items.ifood.subtitle'),
+      desc: t('about.items.ifood.desc'),
+      icon: Briefcase,
+      date: `09/2026 — ${t('common.present')}`
+    },
+    {
       title: t('about.items.openSource.title'),
       company: t('about.items.openSource.subtitle'),
       desc: t('about.items.openSource.desc'),

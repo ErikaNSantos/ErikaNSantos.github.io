@@ -66,6 +66,11 @@ export const translations = {
           subtitle: 'Modelagem termodinâmica computacional',
           desc: 'UNIFAC, Python, estimativa de parâmetros.'
         },
+        ifood: {
+          title: 'Analista de Dados Pleno',
+          subtitle: 'iFood — Performance e Coleta (Logística)',
+          desc: 'Monitoramento de indicadores de performance e coleta na operação de logística.'
+        },
         openSource: {
           title: 'Open Source',
           subtitle: 'Projetos públicos',
@@ -217,6 +222,11 @@ export const translations = {
           title: 'Final Thesis UFBA',
           subtitle: 'Computational thermodynamic modeling',
           desc: 'UNIFAC, Python, parameter estimation.'
+        },
+        ifood: {
+          title: 'Mid-level Data Analyst',
+          subtitle: 'iFood — Performance & Collection (Logistics)',
+          desc: 'Monitoring performance and collection indicators for the logistics operation.'
         },
         openSource: {
           title: 'Open Source',
