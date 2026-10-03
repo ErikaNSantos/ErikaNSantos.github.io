@@ -128,7 +128,7 @@ export const translations = {
       email: 'Email',
       linkedin: 'LinkedIn',
       github: 'GitHub',
-      location: 'Camaçari, Bahia - Brasil (Disponível para Remoto)',
+      location: 'Salvador, Bahia - Brasil (Disponível para Remoto)',
       form: {
         name: 'Seu Nome',
         namePlaceholder: 'Qual o seu nome?',
@@ -280,7 +280,7 @@ export const translations = {
       email: 'Email',
       linkedin: 'LinkedIn',
       github: 'GitHub',
-      location: 'Camaçari, Bahia - Brazil (Available for Remote)',
+      location: 'Salvador, Bahia - Brazil (Available for Remote)',
       form: {
         name: 'Your Name',
         namePlaceholder: 'What is your name?',
