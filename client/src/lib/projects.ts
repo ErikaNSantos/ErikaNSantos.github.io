@@ -22,8 +22,8 @@ export const PROJECTS: Project[] = [
   },
   {
     key: "tcc",
-    tags: ["Python", "SciPy", "UNIFAC", "Optimization"],
-    github: "https://github.com/ErikaNSantos",
+    tags: ["Python", "UNIFAC-LL", "COSMO-SAC", "Termodinâmica"],
+    github: "https://github.com/ErikaNSantos/lle-pil-biodiesel",
     demo: null,
     icon: FlaskConical,
     accent: "var(--accent-rose)",
