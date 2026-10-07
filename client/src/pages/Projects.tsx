@@ -71,7 +71,16 @@ export default function Projects() {
                 aria-label={t(`projects.${project.key}.title`)}
               />
               <div className="relative">
-                <ProjectVisual icon={project.icon} accent={project.accent} patternId={project.key} />
+                {project.cover ? (
+                  <img
+                    src={project.cover}
+                    alt=""
+                    loading="lazy"
+                    className="w-full h-[180px] rounded-2xl object-cover object-left-top border border-white/5"
+                  />
+                ) : (
+                  <ProjectVisual icon={project.icon} accent={project.accent} patternId={project.key} />
+                )}
                 <a
                   href={project.github}
                   target="_blank"
