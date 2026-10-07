@@ -2,8 +2,11 @@ import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Preload } from "@react-three/drei";
 import WaveParticles from "./WaveParticles";
+import { useTheme } from "@/contexts/ThemeContext";
 
 const ComputersCanvas = () => {
+  // O tema é lido aqui fora: dentro do <Canvas> o contexto do React não chega garantido.
+  const { theme } = useTheme();
   return (
     <Canvas
       shadows
@@ -15,7 +18,7 @@ const ComputersCanvas = () => {
       <Suspense fallback={null}>
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} intensity={1} />
-        <WaveParticles />
+        <WaveParticles dark={theme === "dark"} />
       </Suspense>
       <Preload all />
     </Canvas>

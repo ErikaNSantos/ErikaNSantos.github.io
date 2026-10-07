@@ -26,7 +26,7 @@ function Figure({ src, caption, narrow }: { src: string; caption: string; narrow
           src={src}
           alt={caption}
           loading="lazy"
-          className="w-full rounded-2xl border border-white/10 bg-tertiary hover:border-primary/50 transition-colors"
+          className="w-full rounded-2xl border border-line-strong bg-tertiary hover:border-primary/50 transition-colors"
         />
       </a>
       <figcaption className="mt-3 text-[14px] leading-[22px] text-secondary">{caption}</figcaption>
@@ -63,7 +63,7 @@ export default function ProjectDetail() {
         <div className="max-w-5xl mx-auto">
           <Link
             href="/projects"
-            className="inline-flex items-center gap-2 text-secondary hover:text-white transition-colors text-[15px] mb-8"
+            className="inline-flex items-center gap-2 text-secondary hover:text-heading transition-colors text-[15px] mb-8"
           >
             <ArrowLeft className="w-4 h-4" />
             {t("projects.detail.back")}
@@ -84,7 +84,7 @@ export default function ProjectDetail() {
                   <Icon className="w-8 h-8" style={{ color: project.accent }} />
                 </div>
               )}
-              <h1 className="text-white font-black md:text-[48px] sm:text-[38px] text-[30px] leading-tight font-heading">
+              <h1 className="text-heading font-black md:text-[48px] sm:text-[38px] text-[30px] leading-tight font-heading">
                 {t(k("title"))}
               </h1>
               <p className="mt-5 text-lavender text-[18px] sm:text-[20px] leading-[30px] sm:leading-[32px]">
@@ -92,11 +92,11 @@ export default function ProjectDetail() {
               </p>
             </header>
 
-            <dl className="mt-10 grid grid-cols-2 lg:grid-cols-4 gap-px rounded-2xl overflow-hidden border border-white/10 bg-white/10">
+            <dl className="mt-10 grid grid-cols-2 lg:grid-cols-4 gap-px rounded-2xl overflow-hidden border border-line-strong bg-line-strong">
               {meta.map((item) => (
                 <div key={item.label} className="bg-background p-4 sm:p-5">
                   <dt className="text-[12px] uppercase tracking-wider text-secondary">{item.label}</dt>
-                  <dd className="mt-1 text-[15px] text-white leading-snug">{item.value}</dd>
+                  <dd className="mt-1 text-[15px] text-heading leading-snug">{item.value}</dd>
                 </div>
               ))}
             </dl>
@@ -104,7 +104,7 @@ export default function ProjectDetail() {
             {project.metrics ? (
               <div className="mt-6 grid sm:grid-cols-3 gap-4">
                 {range(project.metrics).map((i) => (
-                  <div key={i} className="bg-tertiary rounded-2xl border border-white/5 p-5">
+                  <div key={i} className="bg-tertiary rounded-2xl border border-line p-5">
                     <p
                       className="font-heading font-black text-[32px] sm:text-[36px] leading-none"
                       style={{ color: project.accent }}
@@ -141,13 +141,13 @@ export default function ProjectDetail() {
                     {range(project.steps).map((i) => (
                       <li
                         key={i}
-                        className="grid grid-cols-[3rem_1fr] gap-4 py-5 border-t border-white/5 first:border-t-0 first:pt-0"
+                        className="grid grid-cols-[3rem_1fr] gap-4 py-5 border-t border-line first:border-t-0 first:pt-0"
                       >
                         <span className="font-heading font-bold text-[20px] text-secondary/60 tabular-nums">
                           {String(i + 1).padStart(2, "0")}
                         </span>
                         <div>
-                          <h3 className="text-white font-bold text-[18px]">{t(k(`steps.${i}.title`))}</h3>
+                          <h3 className="text-heading font-bold text-[18px]">{t(k(`steps.${i}.title`))}</h3>
                           <p className="mt-1 text-secondary text-[16px] leading-[28px]">{t(k(`steps.${i}.desc`))}</p>
                         </div>
                       </li>
@@ -181,12 +181,12 @@ export default function ProjectDetail() {
               )}
             </div>
 
-            <div className="mt-12 pt-8 border-t border-white/5 flex flex-wrap gap-4">
+            <div className="mt-12 pt-8 border-t border-line flex flex-wrap gap-4">
               <a
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-tertiary border border-white/10 hover:border-primary/50 text-white font-bold py-3 px-6 rounded-xl transition-colors"
+                className="inline-flex items-center gap-3 bg-tertiary border border-line-strong hover:border-primary/50 text-heading font-bold py-3 px-6 rounded-xl transition-colors"
               >
                 <Github className="w-5 h-5" />
                 {t("projects.detail.viewCode")}
@@ -207,11 +207,11 @@ export default function ProjectDetail() {
             {next.key !== project.key && (
               <Link
                 href={`/projects/${next.key}`}
-                className="mt-12 group flex items-center justify-between gap-6 rounded-2xl border border-white/5 hover:border-primary/50 bg-tertiary p-6 transition-colors"
+                className="mt-12 group flex items-center justify-between gap-6 rounded-2xl border border-line hover:border-primary/50 bg-tertiary p-6 transition-colors"
               >
                 <div>
                   <p className="text-[13px] uppercase tracking-wider text-secondary">{t("projects.detail.next")}</p>
-                  <p className="mt-1 text-white font-bold text-[20px] group-hover:text-primary transition-colors">
+                  <p className="mt-1 text-heading font-bold text-[20px] group-hover:text-primary transition-colors">
                     {t(`projects.${next.key}.title`)}
                   </p>
                 </div>

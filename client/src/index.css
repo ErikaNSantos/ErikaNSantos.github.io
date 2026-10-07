@@ -35,6 +35,11 @@
   --color-tertiary: var(--tertiary);
   --color-teal: var(--teal);
   --color-lavender: var(--lavender);
+  --color-heading: var(--heading);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-hover: var(--hover);
+  --color-link: var(--link);
 }
 
 :root {
@@ -64,6 +69,52 @@
   --border: rgba(255, 255, 255, 0.08);
   --input: rgba(255, 255, 255, 0.08);
   --ring: var(--primary);
+
+  /* Tokens semânticos: substituem text-white / border-white/x fixos, que só funcionavam no escuro */
+  --heading: #FFFFFF;                     /* títulos e texto de destaque */
+  --line: rgba(255, 255, 255, 0.05);      /* divisórias e bordas sutis */
+  --line-strong: rgba(255, 255, 255, 0.12);
+  --hover: rgba(255, 255, 255, 0.06);     /* fundo de hover/ativo */
+  --link: #60A5FA;                        /* hashtags de tecnologia */
+}
+
+/* Modo claro: vale sempre que o <html> não tem .dark. Contraste medido (WCAG):
+   todo texto ≥ 4,5:1 sobre o fundo. O âmbar original (#F0A028) dá 1,96:1 no claro,
+   por isso aqui ele escurece; nos botões, texto branco sobre ele dá 5,6:1. */
+:root:not(.dark) {
+  --primary: #9A5700;
+  --primary-foreground: #FFFFFF;
+
+  --background: #F6F4EF; /* papel quente */
+  --foreground: #161A22;
+
+  --tertiary: #FFFFFF;   /* cards */
+  --muted: #ECE9E2;
+  --secondary: #5B6273;
+  --teal: #2C7A66;
+  --lavender: #2E3545;
+
+  --accent-gold: #8A6C0A;
+  --accent-rose: #A8456E;
+  --accent-sky: #2F67A8;
+  --accent-violet: #5B4AC0;
+
+  --card: var(--tertiary);
+  --card-foreground: var(--foreground);
+  --popover: #FFFFFF;
+  --popover-foreground: var(--foreground);
+  --muted-foreground: var(--secondary);
+  --accent: var(--muted);
+  --accent-foreground: var(--foreground);
+
+  --border: rgba(22, 26, 34, 0.10);
+  --input: rgba(22, 26, 34, 0.12);
+
+  --heading: #161A22;
+  --line: rgba(22, 26, 34, 0.08);
+  --line-strong: rgba(22, 26, 34, 0.14);
+  --hover: rgba(22, 26, 34, 0.05);
+  --link: #1D4ED8;
 }
 
 .dark {
@@ -104,11 +155,11 @@
   }
 
   .glass-effect {
-    @apply bg-tertiary/60 backdrop-blur-xl border border-white/10 shadow-lg;
+    @apply bg-tertiary/60 backdrop-blur-xl border border-line-strong shadow-lg;
   }
 
   .glass-effect-strong {
-    @apply bg-tertiary/80 backdrop-blur-2xl border border-white/15 shadow-xl;
+    @apply bg-tertiary/80 backdrop-blur-2xl border border-line-strong shadow-xl;
   }
 
   .violet-gradient {

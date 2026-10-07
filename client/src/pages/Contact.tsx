@@ -13,7 +13,7 @@ const FORM_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT as string | undefi
 const CONTACT_EMAIL = "erika.nogueira.santos@gmail.com";
 
 const inputClass =
-  "bg-background py-4 px-6 placeholder:text-secondary text-white rounded-xl outline-none font-medium border border-white/5 focus:border-primary/50 focus-visible:ring-2 focus-visible:ring-primary/40 transition-all";
+  "bg-background py-4 px-6 placeholder:text-secondary text-heading rounded-xl outline-none font-medium border border-line focus:border-primary/50 focus-visible:ring-2 focus-visible:ring-primary/40 transition-all";
 
 export default function Contact() {
   const { t } = useLanguage();
@@ -74,12 +74,12 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="flex-[0.75] bg-tertiary p-6 sm:p-8 rounded-2xl border border-white/5 shadow-card"
+            className="flex-[0.75] bg-tertiary p-6 sm:p-8 rounded-2xl border border-line shadow-card"
           >
             <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">
               {t("contact.sectionTitle")}
             </p>
-            <h2 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">
+            <h2 className="text-heading font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">
               {t("contact.title")}
             </h2>
             <div className="w-20 h-1.5 bg-primary mt-4 mb-8" />
@@ -102,7 +102,7 @@ export default function Contact() {
               />
 
               <label className="flex flex-col">
-                <span className="text-white font-medium mb-4">{t("contact.form.name")}</span>
+                <span className="text-heading font-medium mb-4">{t("contact.form.name")}</span>
                 <input
                   type="text"
                   name="name"
@@ -115,7 +115,7 @@ export default function Contact() {
                 />
               </label>
               <label className="flex flex-col">
-                <span className="text-white font-medium mb-4">{t("contact.form.email")}</span>
+                <span className="text-heading font-medium mb-4">{t("contact.form.email")}</span>
                 <input
                   type="email"
                   name="email"
@@ -128,7 +128,7 @@ export default function Contact() {
                 />
               </label>
               <label className="flex flex-col">
-                <span className="text-white font-medium mb-4">{t("contact.form.message")}</span>
+                <span className="text-heading font-medium mb-4">{t("contact.form.message")}</span>
                 <textarea
                   rows={7}
                   name="message"
@@ -149,7 +149,7 @@ export default function Contact() {
               </button>
             </form>
 
-            <div className="mt-12 pt-8 border-t border-white/5 flex flex-wrap gap-8 justify-center md:justify-start">
+            <div className="mt-12 pt-8 border-t border-line flex flex-wrap gap-8 justify-center md:justify-start">
               <div className="flex items-center gap-3 text-secondary">
                 <MapPin className="h-5 w-5 text-primary shrink-0" />
                 <span className="text-sm">{t("contact.location")}</span>
@@ -158,7 +158,7 @@ export default function Contact() {
                 href="https://www.linkedin.com/in/erikanogueirasantos/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-secondary hover:text-white transition-colors"
+                className="flex items-center gap-3 text-secondary hover:text-heading transition-colors"
               >
                 <Linkedin className="h-5 w-5 text-primary" />
                 <span className="text-sm">LinkedIn</span>
@@ -167,7 +167,7 @@ export default function Contact() {
                 href="https://github.com/ErikaNSantos"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-secondary hover:text-white transition-colors"
+                className="flex items-center gap-3 text-secondary hover:text-heading transition-colors"
               >
                 <Github className="h-5 w-5 text-primary" />
                 <span className="text-sm">GitHub</span>

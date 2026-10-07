@@ -15,10 +15,10 @@ function ProjectVisual({ icon: Icon, accent, patternId }: { icon: LucideIcon; ac
       }}
       aria-hidden="true"
     >
-      <svg className="absolute inset-0 w-full h-full opacity-[0.12]" xmlns="http://www.w3.org/2000/svg">
+      <svg className="absolute inset-0 w-full h-full opacity-[0.12] text-heading" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <pattern id={`grid-${patternId}`} width="28" height="28" patternUnits="userSpaceOnUse">
-            <path d="M 28 0 L 0 0 0 28" fill="none" stroke="white" strokeWidth="1" />
+            <path d="M 28 0 L 0 0 0 28" fill="none" stroke="currentColor" strokeWidth="1" />
           </pattern>
         </defs>
         <rect width="100%" height="100%" fill={`url(#grid-${patternId})`} />
@@ -46,7 +46,7 @@ export default function Projects() {
           <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">
             {t("projects.sectionTitle")}
           </p>
-          <h1 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px] font-heading">
+          <h1 className="text-heading font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px] font-heading">
             {t("projects.title")}
           </h1>
           <div className="w-20 h-1.5 bg-primary mt-4 mb-8" />
@@ -63,7 +63,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.08, duration: 0.5 }}
               viewport={{ once: true }}
-              className="relative bg-tertiary p-5 rounded-2xl w-full border border-white/5 hover:border-primary/50 transition-all group flex flex-col"
+              className="relative bg-tertiary p-5 rounded-2xl w-full border border-line hover:border-primary/50 transition-all group flex flex-col"
             >
               <Link
                 href={`/projects/${project.key}`}
@@ -76,7 +76,7 @@ export default function Projects() {
                     src={project.cover}
                     alt=""
                     loading="lazy"
-                    className="w-full h-[180px] rounded-2xl object-cover object-left-top border border-white/5"
+                    className="w-full h-[180px] rounded-2xl object-cover object-left-top border border-line"
                   />
                 ) : (
                   <ProjectVisual icon={project.icon} accent={project.accent} patternId={project.key} />
@@ -88,7 +88,7 @@ export default function Projects() {
                   aria-label={`${t(`projects.${project.key}.title`)} — GitHub`}
                   className="absolute top-3 right-3 z-20 w-10 h-10 rounded-full flex justify-center items-center bg-background/80 hover:bg-primary transition-colors group/gh"
                 >
-                  <Github className="w-5 h-5 text-white group-hover/gh:text-primary-foreground transition-colors" />
+                  <Github className="w-5 h-5 text-heading group-hover/gh:text-primary-foreground transition-colors" />
                 </a>
                 {project.demo && (
                   <a
@@ -99,13 +99,13 @@ export default function Projects() {
                     aria-label={`${t(`projects.${project.key}.title`)} — ${t("projects.demo")}`}
                     className="absolute top-3 right-14 z-20 w-10 h-10 rounded-full flex justify-center items-center bg-background/80 hover:bg-primary transition-colors group/demo"
                   >
-                    <ExternalLink className="w-5 h-5 text-white group-hover/demo:text-primary-foreground transition-colors" />
+                    <ExternalLink className="w-5 h-5 text-heading group-hover/demo:text-primary-foreground transition-colors" />
                   </a>
                 )}
               </div>
 
               <div className="mt-5 flex-1">
-                <h3 className="text-white font-bold text-[22px] leading-snug group-hover:text-primary transition-colors">
+                <h3 className="text-heading font-bold text-[22px] leading-snug group-hover:text-primary transition-colors">
                   {t(`projects.${project.key}.title`)}
                 </h3>
                 <p className="mt-2 text-secondary text-[14px] leading-[24px]">
@@ -115,7 +115,7 @@ export default function Projects() {
 
               <div className="mt-4 flex flex-wrap gap-2">
                 {project.tags.map((tag) => (
-                  <span key={tag} className="text-[13px] text-blue-400">
+                  <span key={tag} className="text-[13px] text-link">
                     #{tag.replace(/\s+/g, "").toLowerCase()}
                   </span>
                 ))}

@@ -84,14 +84,14 @@ export default function BlogPost() {
           </motion.header>
 
           {/* Divider */}
-          <div className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-12" />
+          <div className="h-px bg-gradient-to-r from-transparent via-line-strong to-transparent my-12" />
 
           {/* Content */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="prose prose-invert max-w-none"
+            className="prose dark:prose-invert max-w-none"
           >
             <Streamdown>{content}</Streamdown>
           </motion.div>
@@ -101,7 +101,7 @@ export default function BlogPost() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="mt-16 pt-8 border-t border-white/10"
+            className="mt-16 pt-8 border-t border-line-strong"
           >
             <div className="glass-effect-dark rounded-2xl p-8">
               <div className="flex items-center gap-4">
@@ -119,7 +119,7 @@ export default function BlogPost() {
             {/* Navigation */}
             <div className="mt-12 flex justify-center">
               <Link href="/blog">
-                <a className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-white hover:bg-primary/90 transition-colors">
+                <a className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-heading hover:bg-primary/90 transition-colors">
                   {language === 'pt' ? 'Ver mais artigos' : 'Read more articles'}
                   <ArrowLeft className="h-4 w-4 rotate-180" />
                 </a>

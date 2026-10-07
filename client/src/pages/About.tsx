@@ -10,7 +10,7 @@ export default function About() {
     {
       title: t('about.skills.data'),
       icon: LineChart,
-      color: "text-blue-400",
+      color: "text-link",
       skills: ["Python", "Pandas", "NumPy", "SQL", "Power BI", "Excel"]
     },
     {
@@ -86,14 +86,14 @@ export default function About() {
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               <div>
                 <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">{t('common.introduction')}</p>
-                <h1 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px] font-heading leading-tight">{t('about.title')}</h1>
+                <h1 className="text-heading font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px] font-heading leading-tight">{t('about.title')}</h1>
                 <div className="w-20 h-1.5 bg-primary mt-4 mb-8" />
                 <p className="text-secondary text-[18px] leading-[32px]">
                   {t('about.intro')}
                 </p>
               </div>
-              <div className="bg-tertiary rounded-2xl p-8 border border-white/5 shadow-card">
-                <h3 className="text-white text-[24px] font-bold mb-6">{t('about.journey')}</h3>
+              <div className="bg-tertiary rounded-2xl p-8 border border-line shadow-card">
+                <h3 className="text-heading text-[24px] font-bold mb-6">{t('about.journey')}</h3>
                 <div className="space-y-4 text-secondary leading-[28px]">
                   <p>{t('about.journeyDesc')}</p>
                   <p>{t('about.transition')}</p>
@@ -104,7 +104,7 @@ export default function About() {
             {/* Experience Timeline */}
             <div>
               <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">{t('common.journey')}</p>
-              <h2 className="text-white font-black md:text-[50px] sm:text-[40px] text-[30px] mb-12">{t('about.doing')}</h2>
+              <h2 className="text-heading font-black md:text-[50px] sm:text-[40px] text-[30px] mb-12">{t('about.doing')}</h2>
               
               <div className="relative">
                 {/* Vertical Line */}
@@ -121,9 +121,9 @@ export default function About() {
                       className={`flex flex-col md:flex-row items-center gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
                     >
                       {/* Card Content */}
-                      <div className="w-full md:w-[45%] bg-tertiary p-8 rounded-2xl border border-white/5 shadow-card relative group hover:border-primary/50 transition-all">
+                      <div className="w-full md:w-[45%] bg-tertiary p-8 rounded-2xl border border-line shadow-card relative group hover:border-primary/50 transition-all">
                         <span className="text-primary text-sm font-bold mb-2 block">{exp.date}</span>
-                        <h4 className="text-white text-xl font-bold mb-1">{exp.title}</h4>
+                        <h4 className="text-heading text-xl font-bold mb-1">{exp.title}</h4>
                         <p className="text-teal font-medium text-sm mb-4">{exp.company}</p>
                         <p className="text-secondary text-sm leading-relaxed">{exp.desc}</p>
                         
@@ -148,24 +148,24 @@ export default function About() {
             {/* Skills Reorganized */}
             <div>
               <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">{t('common.skills')}</p>
-              <h2 className="text-white font-black md:text-[50px] sm:text-[40px] text-[30px] mb-12">{t('about.skills.technicalTitle')}</h2>
+              <h2 className="text-heading font-black md:text-[50px] sm:text-[40px] text-[30px] mb-12">{t('about.skills.technicalTitle')}</h2>
               
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {skillCards.map((stack, index) => (
                   <motion.div 
                     key={index}
                     whileHover={{ y: -10 }}
-                    className="bg-tertiary rounded-2xl p-8 border border-white/5 shadow-card hover:border-primary/30 transition-all flex flex-col h-full"
+                    className="bg-tertiary rounded-2xl p-8 border border-line shadow-card hover:border-primary/30 transition-all flex flex-col h-full"
                   >
                     <div className="w-12 h-12 rounded-xl bg-background flex items-center justify-center mb-6 shadow-inner">
                       <stack.icon className={`h-6 w-6 ${stack.color}`} />
                     </div>
-                    <h3 className="text-white font-bold text-xl mb-6">{stack.title}</h3>
+                    <h3 className="text-heading font-bold text-xl mb-6">{stack.title}</h3>
                     <div className="flex flex-wrap gap-2 mt-auto">
                       {stack.skills.map(skill => (
                         <span 
                           key={skill} 
-                          className="px-3 py-1.5 rounded-lg bg-background text-secondary text-xs font-medium border border-white/5 hover:text-white hover:border-primary/50 transition-all cursor-default"
+                          className="px-3 py-1.5 rounded-lg bg-background text-secondary text-xs font-medium border border-line hover:text-heading hover:border-primary/50 transition-all cursor-default"
                         >
                           {skill}
                         </span>

@@ -23,7 +23,7 @@ export default function Blog() {
 
         {posts.length === 0 && (
           <div className="glass-effect rounded-2xl p-10 text-center max-w-2xl">
-            <p className="text-white text-xl font-bold mb-2">{t('blog.empty')}</p>
+            <p className="text-heading text-xl font-bold mb-2">{t('blog.empty')}</p>
             <p className="text-secondary mb-6">{t('blog.emptyDesc')}</p>
             <Link href="/projects" className="inline-flex items-center gap-2 text-primary font-bold hover:underline">
               {t('blog.emptyCta')} <ArrowRight className="h-4 w-4" />
@@ -56,7 +56,7 @@ export default function Blog() {
                     </div>
 
                     {/* Meta */}
-                    <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground pt-4 border-t border-white/10">
+                    <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground pt-4 border-t border-line-strong">
                       <div className="flex items-center gap-2">
                         <Calendar className="h-4 w-4" />
                         <time dateTime={post.date}>

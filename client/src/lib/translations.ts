@@ -7,6 +7,8 @@ export const translations = {
       about: 'Sobre',
       projects: 'Projetos',
       contact: 'Contato',
+      toLight: 'Mudar para o modo claro',
+      toDark: 'Mudar para o modo escuro',
     },
     common: {
       introduction: 'Introdução',
@@ -208,6 +210,8 @@ export const translations = {
       about: 'About',
       projects: 'Projects',
       contact: 'Contact',
+      toLight: 'Switch to light mode',
+      toDark: 'Switch to dark mode',
     },
     common: {
       introduction: 'Introduction',

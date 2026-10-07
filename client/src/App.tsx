@@ -38,7 +38,7 @@ function App() {
   return (
     <ErrorBoundary>
       <LanguageProvider>
-        <ThemeProvider defaultTheme="dark">
+        <ThemeProvider defaultTheme="dark" switchable>
           <TooltipProvider>
             <Toaster />
             <div className="min-h-screen bg-background font-sans antialiased selection:bg-primary/30 selection:text-primary-foreground">

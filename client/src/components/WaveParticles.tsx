@@ -2,7 +2,7 @@ import { useRef, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 
-const RandomVerticalParticles = () => {
+const RandomVerticalParticles = ({ dark = true }: { dark?: boolean }) => {
   const pointsRef = useRef<THREE.Points>(null);
   
   // Aumentamos o número de pontos para gerar densidade na nuvem caótica
@@ -90,12 +90,13 @@ const RandomVerticalParticles = () => {
       {/* Visual idêntico à caixa vermelha: micropontos brilhantes e sobrepostos */}
       <pointsMaterial
         size={0.15}
-        color="#F0A028"
+        // Soma de luz some sobre fundo claro: no tema claro, mistura normal com o âmbar escuro.
+        color={dark ? "#F0A028" : "#9A5700"}
         transparent = {true}
-        opacity={0.45}
+        opacity={dark ? 0.45 : 0.3}
         sizeAttenuation={true}
         depthWrite={false}
-        blending={THREE.AdditiveBlending}
+        blending={dark ? THREE.AdditiveBlending : THREE.NormalBlending}
       />
     </points>
   );
