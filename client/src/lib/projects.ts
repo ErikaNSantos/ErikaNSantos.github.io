@@ -2,9 +2,6 @@ import { Zap, FlaskConical, Wrench, type LucideIcon } from "lucide-react";
 // ^ O Wrench precisa estar nesta linha de import. Usar o ícone sem importá-lo
 //   lança ReferenceError em runtime e derruba a página.
 
-// Prints do dashboard servidos direto do repositório do projeto: a fonte da verdade é lá.
-const MAINTENANCE_IMG = "https://raw.githubusercontent.com/ErikaNSantos/predictive-mainentance/main/images";
-
 export interface Project {
   key: string;
   tags: string[];
@@ -32,12 +29,12 @@ export const PROJECTS: Project[] = [
     icon: Wrench,
     accent: "var(--accent-violet)",
     year: "2026",
-    cover: `${MAINTENANCE_IMG}/classification.png`,
+    cover: "/images/projects/maintenance/classification.webp",
     metrics: 3,
     steps: 5,
     figures: [
-      { key: "overview", src: `${MAINTENANCE_IMG}/Overview-part2.png` },
-      { key: "rules", src: `${MAINTENANCE_IMG}/rules-validation.png` },
+      { key: "overview", src: "/images/projects/maintenance/overview.webp" },
+      { key: "rules", src: "/images/projects/maintenance/rules-validation.webp" },
     ],
   },
   {
