@@ -17,9 +17,9 @@ function SectionLabel({ children, accent }: { children: React.ReactNode; accent:
   );
 }
 
-function Figure({ src, caption }: { src: string; caption: string }) {
+function Figure({ src, caption, narrow }: { src: string; caption: string; narrow?: boolean }) {
   return (
-    <figure>
+    <figure className={narrow ? "max-w-2xl" : undefined}>
       {/* Abre em tamanho real: no celular os prints de dashboard ficam pequenos demais para ler */}
       <a href={src} target="_blank" rel="noopener noreferrer" className="block cursor-zoom-in">
         <img
@@ -162,7 +162,7 @@ export default function ProjectDetail() {
             {project.figures?.length ? (
               <div className="mt-12 grid gap-10">
                 {project.figures.map((fig) => (
-                  <Figure key={fig.key} src={fig.src} caption={t(k(`figures.${fig.key}`))} />
+                  <Figure key={fig.key} src={fig.src} caption={t(k(`figures.${fig.key}`))} narrow={fig.narrow} />
                 ))}
               </div>
             ) : null}

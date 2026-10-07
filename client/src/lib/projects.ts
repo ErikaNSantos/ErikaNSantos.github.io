@@ -17,7 +17,8 @@ export interface Project {
   /** Quantidade de etapas em projects.<key>.steps.N (title + desc). Sem isso, a abordagem vira parágrafo. */
   steps?: number;
   /** Figuras com legenda em projects.<key>.figures.<key>. */
-  figures?: { key: string; src: string }[];
+  /** narrow: gráfico simples, que fica grande demais na largura toda. */
+  figures?: { key: string; src: string; narrow?: boolean }[];
 }
 
 export const PROJECTS: Project[] = [
@@ -39,11 +40,16 @@ export const PROJECTS: Project[] = [
   },
   {
     key: "tcc",
-    tags: ["Python", "UNIFAC-LL", "COSMO-SAC", "Termodinâmica"],
+    tags: ["Python", "SciPy", "UNIFAC-LL", "COSMO-SAC", "GAMESS"],
     github: "https://github.com/ErikaNSantos/lle-pil-biodiesel",
     demo: null,
     icon: FlaskConical,
     accent: "var(--accent-rose)",
+    year: "2026",
+    cover: "/images/projects/tcc/binodais.webp",
+    metrics: 3,
+    steps: 5,
+    figures: [{ key: "gap", src: "/images/projects/tcc/lacuna.webp", narrow: true }],
   },
   {
     key: "energyBot",
