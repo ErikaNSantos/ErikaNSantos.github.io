@@ -1,5 +1,5 @@
-import { Zap, FlaskConical, Wrench, type LucideIcon } from "lucide-react";
-// ^ O Wrench precisa estar nesta linha de import. Usar o ícone sem importá-lo
+import { Zap, FlaskConical, Wrench, Fuel, type LucideIcon } from "lucide-react";
+// ^ Todo ícone usado abaixo precisa estar nesta linha de import. Usar o ícone sem importá-lo
 //   lança ReferenceError em runtime e derruba a página.
 
 export interface Project {
@@ -23,10 +23,27 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    key: "fuel",
+    tags: ["Python", "Pandas", "GitHub Actions", "D3.js"],
+    github: "https://github.com/ErikaNSantos/raio-x-combustiveis",
+    demo: "https://erikansantos.github.io/raio-x-combustiveis/",
+    icon: Fuel,
+    accent: "var(--accent-sky)",
+    year: "2026",
+    cover: "/images/projects/raio-x/mapa.webp",
+    metrics: 3,
+    steps: 5,
+    figures: [
+      { key: "etanol", src: "/images/projects/raio-x/etanol.webp" },
+      { key: "evolucao", src: "/images/projects/raio-x/evolucao.webp" },
+      { key: "capitais", src: "/images/projects/raio-x/capitais.webp" },
+    ],
+  },
+  {
     key: "maintenance",
-    tags: ["Python", "Pandas", "scikit-learn", "streamlit"],
+    tags: ["Python", "Pandas", "scikit-learn", "D3.js"],
     github: "https://github.com/ErikaNSantos/predictive-mainentance",
-    demo: null,
+    demo: "https://erikansantos.github.io/predictive-mainentance/",
     icon: Wrench,
     accent: "var(--accent-violet)",
     year: "2026",
