@@ -24,7 +24,7 @@ export interface Project {
 export const PROJECTS: Project[] = [
   {
     key: "fuel",
-    tags: ["Python", "Pandas", "GitHub Actions", "D3.js"],
+    tags: ["Python", "DuckDB", "Parquet", "GitHub Actions", "D3.js"],
     github: "https://github.com/ErikaNSantos/raio-x-combustiveis",
     demo: "https://erikansantos.github.io/raio-x-combustiveis/",
     icon: Fuel,
