@@ -74,3 +74,14 @@ jobs:
           ls -la base/parquet
           gh release upload "$TAG" -R "$GITHUB_REPOSITORY" base/parquet/* --clobber
           gh release edit "$TAG" -R "$GITHUB_REPOSITORY" --notes-file base/notas_release.md
+
+      - name: Conferir consulta remota
+        if: ${{ !cancelled() }}
+        run: |
+          python - <<'PY'
+          import duckdb
+          con = duckdb.connect()
+          con.execute("INSTALL httpfs; LOAD httpfs;")
+          url = "https://github.com/ErikaNSantos/erikansantos.github.io/releases/download/base-combustiveis/combustiveis_2024.parquet"
+          print(con.sql(f"SELECT produto, median(preco_venda) AS mediana, count(*) AS coletas FROM '{url}' WHERE uf = 'BA' GROUP BY ALL ORDER BY ALL"))
+          PY
