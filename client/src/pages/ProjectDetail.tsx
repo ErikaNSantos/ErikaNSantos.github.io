@@ -40,7 +40,11 @@ export default function ProjectDetail() {
   const project = id ? getProject(id) : undefined;
 
   // O link "Próximo projeto" fica no fim da página e reaproveita este componente: sem isso, a página nova abriria no rodapé.
-  useEffect(() => window.scrollTo(0, 0), [id]);
+  // Corpo em bloco de propósito: em navegadores novos o scrollTo devolve uma Promise, e o React
+  // tentaria chamá-la como função de limpeza ao sair da página ("j is not a function").
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   if (!project) return <Redirect to="/projects" />;
 
