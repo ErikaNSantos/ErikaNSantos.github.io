@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       modo:
-        description: "completo = refaz todos os anos; recente = só o ano atual e o anterior"
+        description: "recente = só anos novos ou alterados (retoma execuções interrompidas); completo = refaz todos"
         type: choice
         options: [recente, completo]
         default: recente
@@ -59,12 +59,12 @@ jobs:
       - name: Construir
         working-directory: raio-x
         run: |
-          MODO="${{ github.event.inputs.modo || 'recente' }}"
-          if [ "$MODO" = "completo" ]; then
-            python -m base.construir --saida base/parquet
+          # Sem --refazer, só entram os anos novos ou cujos arquivos na ANP mudaram
+          # (na semana a semana, o ano corrente). Uma execução que falhou continua de onde parou.
+          if [ "${{ github.event.inputs.modo }}" = "completo" ]; then
+            python -m base.construir --saida base/parquet --refazer
           else
-            ANO=$(date -u +%Y)
-            python -m base.construir --saida base/parquet --anos $((ANO - 1)) $ANO
+            python -m base.construir --saida base/parquet
           fi
 
       - name: Publicar
