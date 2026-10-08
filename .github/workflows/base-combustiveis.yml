@@ -1,0 +1,76 @@
+# Base histórica de preços de combustíveis da ANP (2004 em diante), em Parquet.
+# O código que monta a base fica em github.com/ErikaNSantos/raio-x-combustiveis (pasta base/);
+# os arquivos são publicados na Release "base-combustiveis" deste repositório.
+name: Base de combustíveis (ANP)
+
+on:
+  schedule:
+    - cron: "0 9 * * 1" # segunda, antes da atualização do Raio-X (12:00 UTC)
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "completo = refaz todos os anos; recente = só o ano atual e o anterior"
+        type: choice
+        options: [recente, completo]
+        default: recente
+
+permissions:
+  contents: write
+
+concurrency:
+  group: base-combustiveis
+  cancel-in-progress: false
+
+env:
+  TAG: base-combustiveis
+  GH_TOKEN: ${{ github.token }}
+
+jobs:
+  construir:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: ErikaNSantos/raio-x-combustiveis
+          path: raio-x
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Dependências
+        run: pip install duckdb pandas
+
+      - name: Release (cria se não existir)
+        run: |
+          if ! gh release view "$TAG" -R "$GITHUB_REPOSITORY" > /dev/null 2>&1; then
+            gh release create "$TAG" -R "$GITHUB_REPOSITORY" \
+              --title "Base histórica de preços de combustíveis (ANP)" \
+              --notes-file raio-x/base/notas_release.md --latest=false
+          fi
+
+      - name: Manifesto atual
+        working-directory: raio-x
+        run: |
+          mkdir -p base/parquet
+          gh release download "$TAG" -R "$GITHUB_REPOSITORY" -p manifesto.json -D base/parquet || true
+
+      - name: Construir
+        working-directory: raio-x
+        run: |
+          MODO="${{ github.event.inputs.modo || 'recente' }}"
+          if [ "$MODO" = "completo" ]; then
+            python -m base.construir --saida base/parquet
+          else
+            ANO=$(date -u +%Y)
+            python -m base.construir --saida base/parquet --anos $((ANO - 1)) $ANO
+          fi
+
+      - name: Publicar
+        if: ${{ !cancelled() }}
+        working-directory: raio-x
+        run: |
+          ls -la base/parquet
+          gh release upload "$TAG" -R "$GITHUB_REPOSITORY" base/parquet/* --clobber
+          gh release edit "$TAG" -R "$GITHUB_REPOSITORY" --notes-file base/notas_release.md
