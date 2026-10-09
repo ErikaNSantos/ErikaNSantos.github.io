@@ -110,8 +110,8 @@ export const translations = {
       },
         fuel: {
           title: 'Raio-X dos Combustíveis',
-          desc: 'Base única com 25,5 milhões de preços da ANP desde 2004, montada com DuckDB, e um painel que corrige pela inflação e mostra o combustível por estado, capital e município.',
-          tagline: 'Toda a pesquisa de preços da ANP desde 2004 numa base única em Parquet, montada com DuckDB e aberta para consulta, e um painel que se atualiza sozinho com gasolina, etanol e diesel em cada estado, capital e município, corrigidos pela inflação.',
+          desc: 'Base única com 25,5 milhões de preços da ANP desde 2004, montada com DuckDB, e um painel que corrige pela inflação e mostra combustível e botijão de gás por estado, capital e município.',
+          tagline: 'Toda a pesquisa de preços da ANP desde 2004 numa base única em Parquet, montada com DuckDB e aberta para consulta, e um painel que se atualiza sozinho com gasolina, etanol, diesel e o botijão de gás em cada estado, capital e município, corrigidos pela inflação.',
           role: 'Autora',
           origin: 'Projeto pessoal · dados abertos da ANP e do IBGE',
           metrics: {
@@ -134,7 +134,7 @@ export const translations = {
             evolucao: 'Gasolina desde 2004, em reais de hoje, com a faixa onde ficam 80% dos postos. Os buracos são junho de 2014 e setembro de 2020, meses sem coleta da ANP.',
             capitais: 'Mesma cidade, preços diferentes: a faixa de 80% dos postos em cada capital, sem os extremos.',
           },
-          result: 'Descontada a inflação, a gasolina custa hoje praticamente o mesmo que em 2004: R$ 6,59 em maio de 2004 e R$ 6,54 em setembro de 2026, em reais de hoje. No meio do caminho, chegou a R$ 8,68 em maio de 2022 e caiu para R$ 5,98 em setembro do mesmo ano, depois do teto do ICMS. O etanol ficou 25% mais caro em termos reais no período (R$ 3,40 para R$ 4,25), e o diesel comum, 45%. Mais recentemente, o painel mostrou o salto do diesel S10 em março de 2026: de R$ 6,09 para R$ 7,19 na mediana nacional, 18% num mês, em todos os estados.',
+          result: 'Descontada a inflação, a gasolina custa hoje praticamente o mesmo que em 2004: R$ 6,59 em maio de 2004 e R$ 6,54 em setembro de 2026, em reais de hoje. No meio do caminho, chegou a R$ 8,68 em maio de 2022 e caiu para R$ 5,98 em setembro do mesmo ano, depois do teto do ICMS. O etanol ficou 25% mais caro em termos reais no período (R$ 3,40 para R$ 4,25), e o diesel comum, 45%. O botijão de gás subiu 15% acima da inflação (R$ 99,97 para R$ 115 em reais de hoje), mas pesa menos no bolso de quem ganha o mínimo: 11,5% do salário mínimo em 2004, 7,1% hoje. Mais recentemente, o painel mostrou o salto do diesel S10 em março de 2026: de R$ 6,09 para R$ 7,19 na mediana nacional, 18% num mês, em todos os estados.',
           limitations: 'A ANP pesquisa uma amostra (hoje cerca de 400 municípios e 6 mil postos por mês), não todos, e o tamanho dela mudou ao longo dos anos: em 2004 eram mais de 16 mil postos. O diesel S10 só entra em 2012, e o preço de compra pelo posto só vem até cerca de 2020, então o painel não calcula margem. A regra dos 70% para o etanol é uma aproximação.',
         },
         maintenance: {
@@ -342,8 +342,8 @@ export const translations = {
       },
         fuel: {
           title: 'Fuel Price X-Ray (Brazil)',
-          desc: 'A single DuckDB-built database of 25.5 million ANP fuel prices since 2004, plus a dashboard that adjusts for inflation and shows prices by state, capital and city.',
-          tagline: 'Every price survey from Brazil\'s fuel regulator (ANP) since 2004 in a single Parquet database, built with DuckDB and open for anyone to query, plus a self-updating dashboard of inflation-adjusted gasoline, ethanol and diesel prices for every state, capital and surveyed city.',
+          desc: 'A single DuckDB-built database of 25.5 million ANP fuel prices since 2004, plus a dashboard that adjusts for inflation and shows fuel and cooking gas prices by state, capital and city.',
+          tagline: 'Every price survey from Brazil\'s fuel regulator (ANP) since 2004 in a single Parquet database, built with DuckDB and open for anyone to query, plus a self-updating dashboard of inflation-adjusted gasoline, ethanol, diesel and cooking gas prices for every state, capital and surveyed city.',
           role: 'Author',
           origin: 'Personal project · ANP and IBGE open data',
           metrics: {
@@ -366,7 +366,7 @@ export const translations = {
             evolucao: 'Gasoline since 2004, in today\'s reais, with the band holding 80% of stations. The gaps are June 2014 and September 2020, months with no ANP survey.',
             capitais: 'Same city, different prices: the band holding 80% of stations in each capital, without the extremes.',
           },
-          result: 'After inflation, gasoline costs about the same today as in 2004: R$ 6.59 in May 2004 and R$ 6.54 in September 2026, in today\'s reais. Along the way it peaked at R$ 8.68 in May 2022 and dropped to R$ 5.98 by September that year, after the cap on the ICMS state tax. Ethanol got 25% more expensive in real terms over the period (R$ 3.40 to R$ 4.25), and regular diesel 45%. More recently, the dashboard surfaced the March 2026 jump in S10 diesel: from R$ 6.09 to R$ 7.19 at the national median, 18% in one month, across every state.',
+          result: 'After inflation, gasoline costs about the same today as in 2004: R$ 6.59 in May 2004 and R$ 6.54 in September 2026, in today\'s reais. Along the way it peaked at R$ 8.68 in May 2022 and dropped to R$ 5.98 by September that year, after the cap on the ICMS state tax. Ethanol got 25% more expensive in real terms over the period (R$ 3.40 to R$ 4.25), and regular diesel 45%. A 13 kg cooking gas cylinder rose 15% above inflation (R$ 99.97 to R$ 115 in today\'s reais), yet weighs less on minimum-wage earners: 11.5% of the minimum wage in 2004, 7.1% today. More recently, the dashboard surfaced the March 2026 jump in S10 diesel: from R$ 6.09 to R$ 7.19 at the national median, 18% in one month, across every state.',
           limitations: 'ANP surveys a sample (today about 400 cities and 6,000 stations a month), not every station, and the sample size has changed over the years: in 2004 it covered more than 16,000 stations. S10 diesel only enters in 2012, and the station\'s purchase price is only filled until around 2020, so the dashboard does not compute margins. The 70% rule for ethanol is an approximation.',
         },
         maintenance: {
