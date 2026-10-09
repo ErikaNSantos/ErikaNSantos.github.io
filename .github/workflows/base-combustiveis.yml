@@ -1,4 +1,4 @@
-# Base histórica de preços de combustíveis da ANP (2004 em diante), em Parquet.
+# Base histórica de preços de combustíveis e de GLP da ANP (2004 em diante), em Parquet.
 # O código que monta a base fica em github.com/ErikaNSantos/raio-x-combustiveis (pasta base/);
 # os arquivos são publicados na Release "base-combustiveis" deste repositório.
 name: Base de combustíveis (ANP)
@@ -54,18 +54,20 @@ jobs:
         working-directory: raio-x
         run: |
           mkdir -p base/parquet
-          gh release download "$TAG" -R "$GITHUB_REPOSITORY" -p manifesto.json -D base/parquet || true
+          gh release download "$TAG" -R "$GITHUB_REPOSITORY" -p 'manifesto*.json' -D base/parquet || true
 
       - name: Construir
         working-directory: raio-x
         run: |
           # Sem --refazer, só entram os anos novos ou cujos arquivos na ANP mudaram
           # (na semana a semana, o ano corrente). Uma execução que falhou continua de onde parou.
-          if [ "${{ github.event.inputs.modo }}" = "completo" ]; then
-            python -m base.construir --saida base/parquet --refazer
-          else
-            python -m base.construir --saida base/parquet
-          fi
+          EXTRA=""
+          [ "${{ github.event.inputs.modo }}" = "completo" ] && EXTRA="--refazer"
+          # As duas famílias rodam mesmo se a primeira falhar; o passo falha no fim se alguma falhou.
+          FALHOU=0
+          python -m base.construir --saida base/parquet --familia combustiveis $EXTRA || FALHOU=1
+          python -m base.construir --saida base/parquet --familia glp $EXTRA || FALHOU=1
+          exit $FALHOU
 
       - name: Publicar
         if: ${{ !cancelled() }}
