@@ -1,4 +1,4 @@
-import { Zap, FlaskConical, Wrench, Fuel, type LucideIcon } from "lucide-react";
+import { Zap, FlaskConical, Wrench, Fuel, Vote, type LucideIcon } from "lucide-react";
 // ^ Todo ícone usado abaixo precisa estar nesta linha de import. Usar o ícone sem importá-lo
 //   lança ReferenceError em runtime e derruba a página.
 
@@ -22,6 +22,24 @@ export interface Project {
 }
 
 export const PROJECTS: Project[] = [
+  {
+    key: "elections",
+    tags: ["Python", "DuckDB", "SQL", "NumPy", "GitHub Actions"],
+    github: "https://github.com/ErikaNSantos/secoes-2turno-2026",
+    demo: "https://erikansantos.github.io/secoes-2turno-2026/",
+    icon: Vote,
+    accent: "var(--accent-gold)",
+    year: "2026",
+    cover: "/images/projects/secoes/cover.webp",
+    metrics: 3,
+    steps: 5,
+    figures: [
+      { key: "funil", src: "/images/projects/secoes/funil.webp", narrow: true },
+      { key: "votos", src: "/images/projects/secoes/votos.webp" },
+      { key: "vencedor", src: "/images/projects/secoes/vencedor.webp" },
+      { key: "estados", src: "/images/projects/secoes/estados.webp" },
+    ],
+  },
   {
     key: "fuel",
     tags: ["Python", "DuckDB", "Parquet", "GitHub Actions", "D3.js"],
