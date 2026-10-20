@@ -35,6 +35,7 @@ export const PROJECTS: Project[] = [
     steps: 5,
     figures: [
       { key: "funil", src: "/images/projects/secoes/funil.webp", narrow: true },
+      { key: "saidas", src: "/images/projects/secoes/saidas.webp", narrow: true },
       { key: "votos", src: "/images/projects/secoes/votos.webp" },
       { key: "vencedor", src: "/images/projects/secoes/vencedor.webp" },
       { key: "estados", src: "/images/projects/secoes/estados.webp" },
