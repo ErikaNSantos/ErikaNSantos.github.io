@@ -4,9 +4,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Erika Nogueira Santos | Analista de Dados e Engenheira Química</title>
+    <title>Erika Nogueira Santos | Data Analyst and Chemical Engineer</title>
     <meta name="description" content="Erika Nogueira Santos, Chemical Engineer and Data Analyst. Python, SQL, Power BI and Lean Six Sigma applied to industrial data, automation and scientific computing. Engenheira Química e Analista de Dados." />
-    <meta property="og:title" content="Erika Nogueira Santos | Analista de Dados e Engenheira Química" />
+    <meta property="og:title" content="Erika Nogueira Santos | Data Analyst and Chemical Engineer" />
     <meta property="og:description" content="Chemical Engineer and Data Analyst: Python, SQL, Power BI, Lean Six Sigma." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://erikansantos.github.io/" />
@@ -18,7 +18,7 @@
         "name": "Erika Nogueira Santos",
         "alternateName": "Érika Santos",
         "url": "https://erikansantos.github.io/",
-        "jobTitle": "Analista de Dados",
+        "jobTitle": "Data Analyst",
         "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universidade Federal da Bahia (UFBA)" },
         "address": { "@type": "PostalAddress", "addressLocality": "Salvador", "addressRegion": "BA", "addressCountry": "BR" },
         "sameAs": [
@@ -41,8 +41,11 @@
         }
         if (theme === 'dark') document.documentElement.classList.add('dark');
         document.documentElement.style.colorScheme = theme;
+        // Com JavaScript, a cópia pré-renderizada fica escondida até o React montar a página.
+        document.documentElement.classList.add('js');
       })();
     </script>
+    <style>.js [data-prerender] { display: none; }</style>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg" />
     <link rel="apple-touch-icon" href="/favicon.jpg" />
   </head>

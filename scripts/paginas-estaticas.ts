@@ -4,12 +4,19 @@ import type { Plugin } from "vite";
 import { translations } from "../client/src/lib/translations";
 
 // Gera, depois do build, uma cópia do index.html para cada rota do site (com título
-// e descrição próprios), mais o sitemap.xml e o robots.txt.
+// e descrição próprios), mais o sitemap.xml, o robots.txt e o llms.txt.
 // Motivo: o GitHub Pages não conhece as rotas do React e respondia 404 em /projects,
 // /about etc. Quem visita era salvo pelo 404.html, mas o Google descartava as páginas.
+// O texto das páginas é preenchido depois pelo scripts/prerender.mjs.
 
 const SITE = "https://erikansantos.github.io";
 const NOME = "Erika Nogueira Santos";
+const LINKEDIN = "https://www.linkedin.com/in/erikanogueirasantos/";
+const GITHUB = "https://github.com/ErikaNSantos";
+const EMAIL = "erika.nogueira.santos@gmail.com";
+
+// Em inglês, como o conteúdo pré-renderizado: o público são vagas remotas internacionais.
+const en = translations.en;
 
 interface Pagina {
   rota: string;
@@ -17,34 +24,57 @@ interface Pagina {
   descricao: string;
 }
 
-function paginas(): Pagina[] {
-  const pt = translations.pt;
-  const projetos = Object.entries(pt.projects)
+function projetos() {
+  return Object.entries(en.projects)
     .filter(([, v]) => typeof v === "object" && v !== null && "title" in v && "desc" in v)
-    .map(([key, v]) => {
-      const p = v as { title: string; desc: string };
-      return { rota: `/projects/${key}/`, titulo: `${p.title} | ${NOME}`, descricao: p.desc };
-    });
+    .map(([key, v]) => ({ key, ...(v as { title: string; desc: string }) }));
+}
 
+function paginas(): Pagina[] {
   return [
-    {
-      rota: "/",
-      titulo: `${NOME} | Analista de Dados e Engenheira Química`,
-      descricao: pt.hero.description,
-    },
-    {
-      rota: "/about/",
-      titulo: `Sobre | ${NOME}`,
-      descricao: `Trajetória de ${NOME}: Engenharia Química na UFBA, dados industriais na Continental Pneus e análise de dados na logística do iFood.`,
-    },
-    { rota: "/projects/", titulo: `Projetos | ${NOME}`, descricao: pt.projects.subtitle },
-    ...projetos,
-    {
-      rota: "/contact/",
-      titulo: `Contato | ${NOME}`,
-      descricao: `Fale com ${NOME}, Analista de Dados e Engenheira Química, aberta a trabalho remoto.`,
-    },
+    { rota: "/", titulo: `${NOME} | Data Analyst and Chemical Engineer`, descricao: en.hero.description },
+    { rota: "/about/", titulo: `About | ${NOME}`, descricao: en.about.intro },
+    { rota: "/projects/", titulo: `Projects | ${NOME}`, descricao: en.projects.subtitle },
+    ...projetos().map((p) => ({ rota: `/projects/${p.key}/`, titulo: `${p.title} | ${NOME}`, descricao: p.desc })),
+    { rota: "/contact/", titulo: `Contact | ${NOME}`, descricao: en.contact.description },
   ];
+}
+
+// Resumo em Markdown para IAs (padrão llms.txt).
+function llmsTxt(): string {
+  const lista = projetos()
+    .map((p) => `- [${p.title}](${SITE}/projects/${p.key}/): ${p.desc}`)
+    .join("\n");
+  return `# ${NOME}
+
+> ${en.hero.description}
+
+${en.about.intro}
+
+${en.about.journeyDesc}
+
+${en.about.transition}
+
+- Location: ${en.contact.location}
+- Availability: ${en.contact.description}
+- Also known as: Érika Santos
+
+## Projects
+
+${lista}
+
+## Pages
+
+- [About](${SITE}/about/): background, experience and education
+- [Projects](${SITE}/projects/): all case studies
+- [Contact](${SITE}/contact/)
+
+## Contact
+
+- Email: ${EMAIL}
+- LinkedIn: ${LINKEDIN}
+- GitHub: ${GITHUB}
+`;
 }
 
 const escapar = (s: string) =>
@@ -90,6 +120,7 @@ export function paginasEstaticas(): Plugin {
         `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`,
       );
       fs.writeFileSync(path.join(outDir, "robots.txt"), `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
+      fs.writeFileSync(path.join(outDir, "llms.txt"), llmsTxt());
     },
   };
 }
